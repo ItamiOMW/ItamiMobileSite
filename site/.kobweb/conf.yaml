@@ -1,0 +1,14 @@
+site:
+  title: "ItamiMobile"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/dist/js/developmentExecutable/itami_mobile.js"
+      api: "build/libs/itami_mobile.jar"
+    prod:
+      script: "build/dist/js/productionExecutable/itami_mobile.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
