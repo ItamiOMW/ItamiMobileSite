@@ -12,7 +12,7 @@ fun initSilkPalette(ctx: InitSilkContext) {
         theme.palettes.apply {
 
             light.apply {
-                val brandPrimary = Color.rgb(r = 98, g = 95, b = 179)
+                val brandPrimary = Color.rgb(r = 109, g = 66, b = 153)
                 background = Color.rgb(r = 230, g = 230, b = 230)
                 color = Color.rgb(r = 0, g = 0, b = 25)
                 overlay = Color.rgb(r = 218, g = 217, b = 227)
@@ -33,8 +33,8 @@ fun initSilkPalette(ctx: InitSilkContext) {
             }
 
             dark.apply {
-                val brandPrimary = Color.rgb(r = 84, g = 80, b = 169)
-                background = Color.rgb(r = 230, g = 230, b = 230)
+                val brandPrimary = Color.rgb(r = 77, g = 39, b = 118)
+                background = Color.rgb(r = 22, g = 21, b = 29)
                 color = Color.rgb(r = 204, g = 204, b = 204)
                 overlay = Color.rgb(r = 29, g = 28, b = 38)
                 brand.set(
