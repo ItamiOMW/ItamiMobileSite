@@ -10,7 +10,6 @@ import com.varabyte.kobweb.silk.theme.colors.palette.*
 fun initSilkPalette(ctx: InitSilkContext) {
     ctx.apply {
         theme.palettes.apply {
-
             light.apply {
                 val brandPrimary = Color.rgb(r = 109, g = 66, b = 153)
                 background = Color.rgb(r = 230, g = 230, b = 230)
@@ -26,9 +25,9 @@ fun initSilkPalette(ctx: InitSilkContext) {
                 )
                 button.set(
                     default = brandPrimary,
-                    hover = brandPrimary.darkened(byPercent = 0.2f),
+                    hover = brandPrimary.darkened(byPercent = 0.1f),
                     focus = brandPrimary,
-                    pressed = brandPrimary.darkened(byPercent = 0.4f)
+                    pressed = brandPrimary.darkened(byPercent = 0.2f)
                 )
             }
 
@@ -47,9 +46,9 @@ fun initSilkPalette(ctx: InitSilkContext) {
                 )
                 button.set(
                     default = brandPrimary,
-                    hover = brandPrimary.lightened(byPercent = 0.2f),
+                    hover = brandPrimary.lightened(byPercent = 0.1f),
                     focus = brandPrimary,
-                    pressed = brandPrimary.lightened(byPercent = 0.4f)
+                    pressed = brandPrimary.lightened(byPercent = 0.2f)
                 )
             }
         }

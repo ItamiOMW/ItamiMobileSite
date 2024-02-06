@@ -2,7 +2,9 @@ package com.itami.itami_mobile
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import com.varabyte.kobweb.compose.css.ScrollBehavior
 import com.varabyte.kobweb.compose.ui.modifiers.minHeight
+import com.varabyte.kobweb.compose.ui.modifiers.scrollBehavior
 import com.varabyte.kobweb.core.App
 import com.varabyte.kobweb.silk.SilkApp
 import com.varabyte.kobweb.silk.components.layout.Surface
@@ -20,7 +22,7 @@ private const val COLOR_MODE_KEY = "itamimobilesite:app:colorMode"
 fun initColorMode(ctx: InitSilkContext) {
     ctx.apply {
         config.apply {
-            initialColorMode = localStorage.getItem(COLOR_MODE_KEY)?.let { ColorMode.valueOf(it) } ?: ColorMode.LIGHT
+            initialColorMode = localStorage.getItem(COLOR_MODE_KEY)?.let { ColorMode.valueOf(it) } ?: ColorMode.DARK
         }
     }
 }
@@ -34,7 +36,11 @@ fun AppEntry(content: @Composable () -> Unit) {
     }
 
     SilkApp {
-        Surface(SmoothColorStyle.toModifier().minHeight(100.vh)) {
+        Surface(
+            modifier = SmoothColorStyle.toModifier()
+                .minHeight(100.vh)
+                .scrollBehavior(ScrollBehavior.Smooth)
+        ) {
             content()
         }
     }
