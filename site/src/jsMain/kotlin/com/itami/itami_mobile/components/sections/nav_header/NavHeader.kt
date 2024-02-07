@@ -90,7 +90,7 @@ fun NavHeader() {
             }
             Box(modifier = Modifier.flex(1), contentAlignment = Alignment.CenterStart) {
                 IconButton(
-                    modifier = Modifier.padding(0.px),
+                    modifier = Modifier.padding(0.25.cssRem),
                     onClick = { sideMenuState = SideMenuState.OPEN }
                 ) {
                     HamburgerIcon(modifier = IconStyle.toModifier().size(36.px))
