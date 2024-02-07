@@ -64,7 +64,7 @@ val NavBarLinkVariant by LinkStyle.addVariant {
         val fontsXL = Fonts[Breakpoint.XL]
         Modifier
             .font { siteFont(fontsXL.labelMedium) }
-            .size(width = 14.em, height = 4.em)
+            .size(width = 13.8.em, height = 3.9.em)
     }
 }
 

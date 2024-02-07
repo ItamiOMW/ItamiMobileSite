@@ -44,7 +44,7 @@ import org.w3c.dom.asList
 fun NavHeader() {
     var colorMode by ColorMode.currentState
 
-    val sections = document.getElementsByTagName("section").asList()
+    val sections = document.getElementsByClassName("section-box").asList()
     var selectedSectionId by remember { mutableStateOf(Section.Start.id) }
 
     LaunchedEffect(selectedSectionId) {

@@ -9,13 +9,13 @@ enum class Section(
         id = "start",
         text = "Start"
     ),
-    About(
-        id = "about",
-        text = "About me"
-    ),
     Works(
         id = "works",
         text = "Works"
+    ),
+    About(
+        id = "about",
+        text = "About me"
     ),
     Contact(
         id = "contact",
