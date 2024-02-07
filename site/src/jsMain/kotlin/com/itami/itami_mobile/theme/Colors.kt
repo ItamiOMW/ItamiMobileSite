@@ -29,6 +29,10 @@ fun initSilkPalette(ctx: InitSilkContext) {
                     focus = brandPrimary,
                     pressed = brandPrimary.darkened(byPercent = 0.2f)
                 )
+                tooltip.set(
+                    background = Color.rgb(r = 218, g = 217, b = 227),
+                    color = Color.rgb(r = 0, g = 0, b = 25),
+                )
             }
 
             dark.apply {
@@ -49,6 +53,10 @@ fun initSilkPalette(ctx: InitSilkContext) {
                     hover = brandPrimary.lightened(byPercent = 0.1f),
                     focus = brandPrimary,
                     pressed = brandPrimary.lightened(byPercent = 0.2f)
+                )
+                tooltip.set(
+                    background = Color.rgb(r = 29, g = 28, b = 38),
+                    color = Color.rgb(r = 204, g = 204, b = 204)
                 )
             }
         }

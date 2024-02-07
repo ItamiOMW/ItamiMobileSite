@@ -1,10 +1,12 @@
 package com.itami.itami_mobile.theme
 
+import com.itami.itami_mobile.utils.Res
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.navigation.LinkStyle
+import com.varabyte.kobweb.silk.components.overlay.TooltipStyle
 import com.varabyte.kobweb.silk.components.style.*
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.breakpoint.BreakpointSizes
@@ -36,6 +38,11 @@ fun initAppStyles(ctx: InitSilkContext) {
                 Modifier
                     .textDecorationLine(TextDecorationLine.None)
                     .color(colorPalette.text.primary)
+            }
+        }
+        modifyComponentStyle(TooltipStyle) {
+            base {
+                Modifier.fontFamily(Res.FontFamilies.POPPINS_REGULAR)
             }
         }
     }

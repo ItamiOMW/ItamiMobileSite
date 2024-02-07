@@ -2,12 +2,14 @@ package com.itami.itami_mobile.components.widgets.button
 
 import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.theme.brand
+import com.varabyte.kobweb.browser.dom.ElementTarget
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.overlay.Tooltip
 import com.varabyte.kobweb.silk.components.style.active
 import com.varabyte.kobweb.silk.components.style.addVariant
 import com.varabyte.kobweb.silk.components.style.hover
@@ -55,6 +57,7 @@ val PrimaryIconButtonVariant by ButtonStyle.addVariant {
 @Composable
 fun IconButton(
     modifier: Modifier = Modifier,
+    tooltipText: String? = null,
     onClick: (() -> Unit)? = null,
     icon: @Composable () -> Unit,
 ) {
@@ -67,11 +70,18 @@ fun IconButton(
     ) {
         icon()
     }
+    if (tooltipText != null) {
+        Tooltip(
+            target = ElementTarget.PreviousSibling,
+            text = tooltipText
+        )
+    }
 }
 
 @Composable
 fun PrimaryIconButton(
     modifier: Modifier = Modifier,
+    tooltipText: String? = null,
     onClick: (() -> Unit)? = null,
     icon: @Composable () -> Unit,
 ) {
@@ -84,6 +94,12 @@ fun PrimaryIconButton(
     ) {
         icon()
     }
+    if (tooltipText != null) {
+        Tooltip(
+            target = ElementTarget.PreviousSibling,
+            text = tooltipText
+        )
+    }
 }
 
 @Composable
@@ -91,6 +107,7 @@ fun PrimaryIconButton(
     modifier: Modifier = Modifier,
     onClick: (() -> Unit)? = null,
     iconRes: String,
+    tooltipText: String? = null,
     iconSize: CSSSizeValue<CSSUnit.rem> = 1.5.cssRem,
 ) {
     Button(
@@ -103,6 +120,12 @@ fun PrimaryIconButton(
         Image(
             src = iconRes,
             modifier = Modifier.size(iconSize)
+        )
+    }
+    if (tooltipText != null) {
+        Tooltip(
+            target = ElementTarget.PreviousSibling,
+            text = tooltipText
         )
     }
 }
