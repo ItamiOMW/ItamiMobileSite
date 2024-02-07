@@ -6,12 +6,12 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.navigation.LinkStyle
-import com.varabyte.kobweb.silk.components.overlay.TooltipStyle
-import com.varabyte.kobweb.silk.components.style.*
+import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.breakpoint.BreakpointSizes
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
+import com.varabyte.kobweb.silk.init.registerStyleBase
 import com.varabyte.kobweb.silk.theme.colors.palette.color
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import com.varabyte.kobweb.silk.theme.modifyComponentStyle
@@ -20,6 +20,11 @@ import org.jetbrains.compose.web.css.px
 
 @InitSilk
 fun initAppStyles(ctx: InitSilkContext) {
+    ctx.stylesheet.apply {
+        registerStyleBase("body") {
+            Modifier.fontFamily(Res.FontFamilies.POPPINS_REGULAR, Res.FontFamilies.POPPINS_MEDIUM)
+        }
+    }
     ctx.theme.apply {
         breakpoints = BreakpointSizes(
             sm = 30.cssRem, // 480 px,
@@ -38,11 +43,6 @@ fun initAppStyles(ctx: InitSilkContext) {
                 Modifier
                     .textDecorationLine(TextDecorationLine.None)
                     .color(colorPalette.text.primary)
-            }
-        }
-        modifyComponentStyle(TooltipStyle) {
-            base {
-                Modifier.fontFamily(Res.FontFamilies.POPPINS_REGULAR)
             }
         }
     }
