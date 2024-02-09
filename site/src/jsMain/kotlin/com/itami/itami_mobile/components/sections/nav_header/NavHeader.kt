@@ -3,8 +3,8 @@ package com.itami.itami_mobile.components.sections.nav_header
 import androidx.compose.runtime.*
 import com.itami.itami_mobile.components.sections.nav_header.components.*
 import com.itami.itami_mobile.components.widgets.button.IconButton
-import com.itami.itami_mobile.theme.HamburgerIcon
-import com.itami.itami_mobile.theme.IconStyle
+import com.itami.itami_mobile.theme.icons.HamburgerIcon
+import com.itami.itami_mobile.theme.icons.IconStyle
 import com.itami.itami_mobile.utils.Section
 import com.varabyte.kobweb.compose.css.JustifyContent
 import com.varabyte.kobweb.compose.css.functions.blur
@@ -83,8 +83,7 @@ fun NavHeader() {
         sections.forEach { section ->
             val positionInfo = section.getBoundingClientRect()
             val top = window.scrollY
-            val offset =
-                positionInfo.top + top - 200 // Don't know why, but that's the only way it works ¯\_(@_@)_/¯
+            val offset = positionInfo.top + top - 200 // Don't know why, but that's the only way it works ¯\_(@_@)_/¯
             val height = positionInfo.height
             val id = section.id
 

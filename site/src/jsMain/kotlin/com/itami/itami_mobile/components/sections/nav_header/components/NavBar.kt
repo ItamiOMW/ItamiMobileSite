@@ -1,9 +1,8 @@
 package com.itami.itami_mobile.components.sections.nav_header.components
 
 import androidx.compose.runtime.Composable
-import com.itami.itami_mobile.theme.Fonts
 import com.itami.itami_mobile.theme.brand
-import com.itami.itami_mobile.theme.siteFont
+import com.itami.itami_mobile.theme.fonts.*
 import com.itami.itami_mobile.theme.text
 import com.itami.itami_mobile.utils.Section
 import com.varabyte.kobweb.compose.css.CSSTransition
@@ -57,10 +56,9 @@ fun NavBar(
 }
 
 
-val NavBarLinkVariant by LinkStyle.addVariant {
+val NavBarLinkVariant by LinkStyle.addVariant(extraModifiers = { LabelMediumTextStyle.toModifier() }) {
     val colorPalette = colorMode.toPalette()
     base {
-        val fontsDefault = Fonts[Breakpoint.XL]
         Modifier
             .alignContent(AlignContent.Center)
             .color(colorPalette.text.primary)
@@ -68,7 +66,6 @@ val NavBarLinkVariant by LinkStyle.addVariant {
             .borderRadius(r = 30.px)
             .textDecorationLine(TextDecorationLine.None)
             .transition(CSSTransition("0.2s"))
-            .font { siteFont(fontsDefault.labelLarge) }
     }
     hover {
         Modifier.background(colorPalette.overlay.shifted(colorMode, 0.1f))
@@ -77,16 +74,10 @@ val NavBarLinkVariant by LinkStyle.addVariant {
         Modifier.background(colorPalette.overlay.shifted(colorMode, 0.15f))
     }
     Breakpoint.LG {
-        val fontsLG = Fonts[Breakpoint.LG]
-        Modifier
-            .font { siteFont(fontsLG.labelMedium) }
-            .size(width = 13.5.em, height = 3.8.em)
+        Modifier.size(width = 13.5.em, height = 3.8.em)
     }
     Breakpoint.XL {
-        val fontsXL = Fonts[Breakpoint.XL]
-        Modifier
-            .font { siteFont(fontsXL.labelMedium) }
-            .size(width = 13.8.em, height = 3.9.em)
+        Modifier.size(width = 13.8.em, height = 3.9.em)
     }
 }
 

@@ -1,4 +1,4 @@
-package com.itami.itami_mobile.theme
+package com.itami.itami_mobile.theme.fonts
 
 import com.itami.itami_mobile.utils.Res
 import com.varabyte.kobweb.compose.css.FontStyle

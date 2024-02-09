@@ -7,6 +7,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.display
 import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.navigation.Anchor
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
+import com.varabyte.kobweb.silk.components.style.ComponentVariant
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
@@ -38,6 +39,7 @@ val AppLogoStyle by ComponentStyle {
 @Composable
 fun AppLogo(
     colorMode: ColorMode,
+    variant: ComponentVariant? = null
 ) {
     Anchor(href = "/") {
         Img(
@@ -45,7 +47,7 @@ fun AppLogo(
                 ColorMode.LIGHT -> Res.Images.LOGO_LIGHT
                 ColorMode.DARK -> Res.Images.LOGO_DARK
             },
-            attrs = AppLogoStyle.toAttrs()
+            attrs = AppLogoStyle.toAttrs(variant)
         )
     }
 }

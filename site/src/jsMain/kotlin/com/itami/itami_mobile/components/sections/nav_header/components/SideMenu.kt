@@ -3,7 +3,10 @@ package com.itami.itami_mobile.components.sections.nav_header.components
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
 import com.itami.itami_mobile.components.widgets.button.IconButton
-import com.itami.itami_mobile.theme.*
+import com.itami.itami_mobile.theme.brand
+import com.itami.itami_mobile.theme.fonts.LabelLargeTextStyle
+import com.itami.itami_mobile.theme.icons.IconStyle
+import com.itami.itami_mobile.theme.text
 import com.itami.itami_mobile.utils.Section
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -120,7 +123,7 @@ fun SideMenu(
 }
 
 
-val SideMenuLinkVariant by LinkStyle.addVariant {
+val SideMenuLinkVariant by LinkStyle.addVariant(extraModifiers = { LabelLargeTextStyle.toModifier() }) {
     val colorPalette = colorMode.toPalette()
     base {
         Modifier
@@ -132,18 +135,6 @@ val SideMenuLinkVariant by LinkStyle.addVariant {
     }
     active {
         Modifier.color(colorPalette.brand.primary.shifted(colorMode, 0.15f))
-    }
-    Breakpoint.ZERO {
-        val fontsSM = Fonts[Breakpoint.SM]
-        Modifier.font { siteFont(fontsSM.labelLarge) }
-    }
-    Breakpoint.SM {
-        val fontsSM = Fonts[Breakpoint.SM]
-        Modifier.font { siteFont(fontsSM.labelLarge) }
-    }
-    Breakpoint.MD {
-        val fontsMD = Fonts[Breakpoint.MD]
-        Modifier.font { siteFont(fontsMD.labelLarge) }
     }
 }
 
