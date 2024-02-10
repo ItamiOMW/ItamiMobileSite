@@ -11,6 +11,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.style.addVariant
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.thenIf
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
@@ -29,11 +30,17 @@ val PrimaryButtonVariant by ButtonStyle.addVariant(extraModifiers = { LabelLarge
             .color(colorPalette.brand.onPrimary)
             .padding(leftRight = 2.25.cssRem, topBottom = 1.1.cssRem)
     }
+    Breakpoint.SM {
+        Modifier.padding(leftRight = 2.0.cssRem, topBottom = 0.9.cssRem)
+    }
 }
 
 val PrimaryButtonWithIconPadding by ButtonStyle.addVariant {
     base {
         Modifier.padding(left = 2.25.cssRem, right = 2.cssRem, top = 1.cssRem, bottom = 1.cssRem)
+    }
+    Breakpoint.SM {
+        Modifier.padding(left = 2.0.cssRem, right = 1.8.cssRem, top = 0.9.cssRem, bottom = 0.9.cssRem)
     }
 }
 
