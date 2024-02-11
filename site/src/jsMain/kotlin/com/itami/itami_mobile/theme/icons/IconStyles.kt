@@ -33,14 +33,14 @@ val IconStyle by ComponentStyle {
     }
 }
 
-val PrimaryIconVariant by IconStyle.addVariant {
+val IconBrandColorVariant by IconStyle.addVariant {
     val colorPalette = colorMode.toPalette()
     base {
         Modifier.color(colorPalette.brand.primary)
     }
 }
 
-val OnPrimaryIconVariant by IconStyle.addVariant {
+val IconOnBrandColorVariant by IconStyle.addVariant {
     val colorPalette = colorMode.toPalette()
     base {
         Modifier.color(colorPalette.brand.onPrimary)

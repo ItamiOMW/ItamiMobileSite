@@ -5,7 +5,7 @@ import com.itami.itami_mobile.components.widgets.button.PrimaryIconButton
 import com.itami.itami_mobile.theme.icons.DarkModeIcon
 import com.itami.itami_mobile.theme.icons.LightModeIcon
 import com.itami.itami_mobile.theme.icons.IconStyle
-import com.itami.itami_mobile.theme.icons.OnPrimaryIconVariant
+import com.itami.itami_mobile.theme.icons.IconOnBrandColorVariant
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 
@@ -19,7 +19,7 @@ fun ThemeIconButton(
             onClick()
         },
     ) {
-        val iconModifier = IconStyle.toModifier(OnPrimaryIconVariant)
+        val iconModifier = IconStyle.toModifier(IconOnBrandColorVariant)
         when (colorMode) {
             ColorMode.LIGHT -> LightModeIcon(modifier = iconModifier)
             ColorMode.DARK -> DarkModeIcon(modifier = iconModifier)
