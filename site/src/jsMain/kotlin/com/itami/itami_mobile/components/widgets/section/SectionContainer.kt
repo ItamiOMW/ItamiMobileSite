@@ -24,19 +24,13 @@ val SectionContainerStyle by ComponentStyle {
             .classNames("section-container")
     }
     Breakpoint.ZERO {
-        Modifier
-            .height(50.vh)
-            .padding(leftRight = 16.px)
+        Modifier.padding(leftRight = 16.px)
     }
     Breakpoint.SM {
-        Modifier
-            .height(50.vh)
-            .padding(leftRight = 28.px)
+        Modifier.padding(leftRight = 28.px)
     }
     Breakpoint.MD {
-        Modifier
-            .height(85.vh)
-            .padding(leftRight = 48.px)
+        Modifier.padding(leftRight = 48.px)
     }
     Breakpoint.LG {
         Modifier.padding(leftRight = 94.px)
