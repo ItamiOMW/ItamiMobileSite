@@ -5,6 +5,7 @@ import androidx.compose.runtime.key
 import com.itami.itami_mobile.components.widgets.button.IconButton
 import com.itami.itami_mobile.theme.brand
 import com.itami.itami_mobile.theme.fonts.LabelLargeTextStyle
+import com.itami.itami_mobile.theme.fonts.TextStyle
 import com.itami.itami_mobile.theme.icons.IconStyle
 import com.itami.itami_mobile.theme.text
 import com.itami.itami_mobile.utils.Section
@@ -123,7 +124,9 @@ fun SideMenu(
 }
 
 
-val SideMenuLinkVariant by LinkStyle.addVariant(extraModifiers = { LabelLargeTextStyle.toModifier() }) {
+val SideMenuLinkVariant by LinkStyle.addVariant(extraModifiers = {
+    TextStyle.toModifier(LabelLargeTextStyle)
+}) {
     val colorPalette = colorMode.toPalette()
     base {
         Modifier

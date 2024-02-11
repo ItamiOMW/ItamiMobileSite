@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.web.events.SyntheticMouseEvent
 import com.itami.itami_mobile.theme.brand
 import com.itami.itami_mobile.theme.fonts.LabelLargeTextStyle
+import com.itami.itami_mobile.theme.fonts.TextStyle
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -20,7 +21,9 @@ import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
 
-val PrimaryButtonVariant by ButtonStyle.addVariant(extraModifiers = { LabelLargeTextStyle.toModifier() }) {
+val PrimaryButtonVariant by ButtonStyle.addVariant(extraModifiers = {
+    TextStyle.toModifier(LabelLargeTextStyle)
+}) {
     val colorPalette = colorMode.toPalette()
     base {
         Modifier

@@ -1,11 +1,47 @@
 package com.itami.itami_mobile.theme.fonts
 
+import com.itami.itami_mobile.theme.brand
+import com.itami.itami_mobile.theme.text
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.font
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
+import com.varabyte.kobweb.silk.components.style.addVariant
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 
-val DisplayTextStyle by ComponentStyle {
+val TextStyle by ComponentStyle {
+    val colorPalette = colorMode.toPalette()
+    val defaultFonts = Fonts[Breakpoint.LG]
+    base {
+        Modifier
+            .color(colorPalette.text.primary)
+            .font { defaultFonts.bodyLarge }
+    }
+}
+
+val TextStylePrimaryColor by TextStyle.addVariant {
+    val colorPalette = colorMode.toPalette()
+    base {
+        Modifier.color(colorPalette.text.primary)
+    }
+}
+
+val TextStyleSecondaryColor by TextStyle.addVariant {
+    val colorPalette = colorMode.toPalette()
+    base {
+        Modifier.color(colorPalette.text.secondary)
+    }
+}
+
+val TextStyleBrandColor by TextStyle.addVariant {
+    val colorPalette = colorMode.toPalette()
+    base {
+        Modifier.color(colorPalette.brand.primary)
+    }
+}
+
+val DisplayTextStyle by TextStyle.addVariant {
     Breakpoint.ZERO {
         val fontsSM = Fonts[Breakpoint.SM]
         Modifier.font { siteFont(fontsSM.display) }
@@ -28,7 +64,7 @@ val DisplayTextStyle by ComponentStyle {
     }
 }
 
-val SubDisplayTextStyle by ComponentStyle {
+val SubDisplayTextStyle by TextStyle.addVariant {
     Breakpoint.ZERO {
         val fontsSM = Fonts[Breakpoint.SM]
         Modifier.font { siteFont(fontsSM.subDisplay) }
@@ -51,7 +87,7 @@ val SubDisplayTextStyle by ComponentStyle {
     }
 }
 
-val LabelLargeTextStyle by ComponentStyle {
+val LabelLargeTextStyle by TextStyle.addVariant {
     Breakpoint.ZERO {
         val fontsSM = Fonts[Breakpoint.SM]
         Modifier.font { siteFont(fontsSM.labelLarge) }
@@ -74,7 +110,7 @@ val LabelLargeTextStyle by ComponentStyle {
     }
 }
 
-val LabelMediumTextStyle by ComponentStyle {
+val LabelMediumTextStyle by TextStyle.addVariant {
     Breakpoint.ZERO {
         val fontsSM = Fonts[Breakpoint.SM]
         Modifier.font { siteFont(fontsSM.labelMedium) }

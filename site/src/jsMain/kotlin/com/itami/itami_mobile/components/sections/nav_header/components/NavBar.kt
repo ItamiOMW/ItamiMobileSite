@@ -56,7 +56,9 @@ fun NavBar(
 }
 
 
-val NavBarLinkVariant by LinkStyle.addVariant(extraModifiers = { LabelMediumTextStyle.toModifier() }) {
+val NavBarLinkVariant by LinkStyle.addVariant(extraModifiers = {
+    TextStyle.toModifier(LabelMediumTextStyle)
+}) {
     val colorPalette = colorMode.toPalette()
     base {
         Modifier
