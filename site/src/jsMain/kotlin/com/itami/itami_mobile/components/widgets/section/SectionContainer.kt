@@ -20,7 +20,7 @@ val SectionContainerStyle by ComponentStyle {
     base {
         Modifier
             .width(100.percent)
-            .height(100.vh)
+            .height(90.vh)
             .classNames("section-container")
     }
     Breakpoint.ZERO {

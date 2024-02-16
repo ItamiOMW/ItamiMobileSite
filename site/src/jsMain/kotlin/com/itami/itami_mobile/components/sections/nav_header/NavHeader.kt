@@ -6,6 +6,7 @@ import com.itami.itami_mobile.components.widgets.button.IconButton
 import com.itami.itami_mobile.theme.icons.HamburgerIcon
 import com.itami.itami_mobile.theme.icons.IconStyle
 import com.itami.itami_mobile.utils.Section
+import com.itami.itami_mobile.utils.UpdateEffect
 import com.varabyte.kobweb.compose.css.JustifyContent
 import com.varabyte.kobweb.compose.css.functions.blur
 import com.varabyte.kobweb.compose.css.functions.saturate
@@ -75,7 +76,8 @@ fun NavHeader() {
     val sections = document.getElementsByClassName("section-container").asList()
     var selectedSectionId by remember { mutableStateOf(Section.Start.id) }
 
-    LaunchedEffect(selectedSectionId) {
+    // Avoiding scrolling to the StartSection when the site is first visited
+    UpdateEffect(selectedSectionId) {
         window.history.replaceState(null, "", "#$selectedSectionId")
     }
 
@@ -83,7 +85,8 @@ fun NavHeader() {
         sections.forEach { section ->
             val positionInfo = section.getBoundingClientRect()
             val top = window.scrollY
-            val offset = positionInfo.top + top - 200 // Don't know why, but that's the only way it works ¯\_(@_@)_/¯
+            val offset =
+                positionInfo.top + top - 200 // Don't know why, but that's the only way it works ¯\_(@_@)_/¯
             val height = positionInfo.height
             val id = section.id
 

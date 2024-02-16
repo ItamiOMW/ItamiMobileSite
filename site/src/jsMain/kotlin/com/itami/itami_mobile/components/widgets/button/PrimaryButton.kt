@@ -12,11 +12,10 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.style.addVariant
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.thenIf
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
-import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
@@ -31,19 +30,13 @@ val PrimaryButtonVariant by ButtonStyle.addVariant(extraModifiers = {
             .height(auto)
             .background(colorPalette.brand.primary)
             .color(colorPalette.brand.onPrimary)
-            .padding(leftRight = 2.25.cssRem, topBottom = 1.1.cssRem)
-    }
-    Breakpoint.SM {
-        Modifier.padding(leftRight = 2.0.cssRem, topBottom = 0.9.cssRem)
+            .padding(leftRight = 2.25.em, topBottom = 1.1.em)
     }
 }
 
 val PrimaryButtonWithIconPadding by ButtonStyle.addVariant {
     base {
-        Modifier.padding(left = 2.25.cssRem, right = 2.cssRem, top = 1.cssRem, bottom = 1.cssRem)
-    }
-    Breakpoint.SM {
-        Modifier.padding(left = 2.0.cssRem, right = 1.8.cssRem, top = 0.9.cssRem, bottom = 0.9.cssRem)
+        Modifier.padding(left = 2.25.em, right = 2.em, top = 1.em, bottom = 1.em)
     }
 }
 

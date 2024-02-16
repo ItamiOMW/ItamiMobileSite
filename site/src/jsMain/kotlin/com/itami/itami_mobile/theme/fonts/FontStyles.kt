@@ -10,6 +10,7 @@ import com.varabyte.kobweb.silk.components.style.addVariant
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 
+// Default text style, used with different color and style variants in other styles or modifiers
 val TextStyle by ComponentStyle {
     val colorPalette = colorMode.toPalette()
     val defaultFonts = Fonts[Breakpoint.LG]
@@ -130,5 +131,74 @@ val LabelMediumTextStyle by TextStyle.addVariant {
     Breakpoint.XL {
         val fontsXL = Fonts[Breakpoint.XL]
         Modifier.font { siteFont(fontsXL.labelMedium) }
+    }
+}
+
+val BodyLargeTextStyle by TextStyle.addVariant {
+    Breakpoint.ZERO {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.bodyLarge) }
+    }
+    Breakpoint.SM {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.bodyLarge) }
+    }
+    Breakpoint.MD {
+        val fontsMD = Fonts[Breakpoint.MD]
+        Modifier.font { siteFont(fontsMD.bodyLarge) }
+    }
+    Breakpoint.LG {
+        val fontsLG = Fonts[Breakpoint.LG]
+        Modifier.font { siteFont(fontsLG.bodyLarge) }
+    }
+    Breakpoint.XL {
+        val fontsXL = Fonts[Breakpoint.XL]
+        Modifier.font { siteFont(fontsXL.bodyLarge) }
+    }
+}
+
+val BodyMediumTextStyle by TextStyle.addVariant {
+    Breakpoint.ZERO {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.bodyMedium) }
+    }
+    Breakpoint.SM {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.bodyMedium) }
+    }
+    Breakpoint.MD {
+        val fontsMD = Fonts[Breakpoint.MD]
+        Modifier.font { siteFont(fontsMD.bodyMedium) }
+    }
+    Breakpoint.LG {
+        val fontsLG = Fonts[Breakpoint.LG]
+        Modifier.font { siteFont(fontsLG.bodyMedium) }
+    }
+    Breakpoint.XL {
+        val fontsXL = Fonts[Breakpoint.XL]
+        Modifier.font { siteFont(fontsXL.bodyMedium) }
+    }
+}
+
+val BodySmallTextStyle by TextStyle.addVariant {
+    Breakpoint.ZERO {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.bodySmall) }
+    }
+    Breakpoint.SM {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.bodySmall) }
+    }
+    Breakpoint.MD {
+        val fontsMD = Fonts[Breakpoint.MD]
+        Modifier.font { siteFont(fontsMD.bodySmall) }
+    }
+    Breakpoint.LG {
+        val fontsLG = Fonts[Breakpoint.LG]
+        Modifier.font { siteFont(fontsLG.bodySmall) }
+    }
+    Breakpoint.XL {
+        val fontsXL = Fonts[Breakpoint.XL]
+        Modifier.font { siteFont(fontsXL.bodySmall) }
     }
 }
