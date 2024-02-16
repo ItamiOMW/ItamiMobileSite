@@ -21,20 +21,25 @@ val SkillSectionDividerStyle by ComponentStyle {
     base {
         Modifier
             .fillMaxWidth()
-            .padding(topBottom = 3.43.cssRem)
             .background(colorPalette.overlay)
             .flexWrap(FlexWrap.Wrap)
             .display(DisplayStyle.Flex)
             .justifyContent(JustifyContent.Center)
-            .gap(48.px)
     }
     Breakpoint.ZERO {
         Modifier
             .gap(12.px)
-            .padding(left = 1.5.cssRem, top = 3.43.cssRem, bottom = 3.43.cssRem)
+            .padding(left = 1.5.cssRem, top = 3.cssRem, bottom = 3.cssRem)
     }
     Breakpoint.SM {
-        Modifier.gap(24.px)
+        Modifier
+            .gap(24.px)
+            .padding(topBottom = 3.23.cssRem)
+    }
+    Breakpoint.MD {
+        Modifier
+            .gap(24.px)
+            .padding(topBottom = 3.43.cssRem)
     }
 }
 
