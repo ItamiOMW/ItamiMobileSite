@@ -103,7 +103,7 @@ fun PrimaryIconButton(
 }
 
 @Composable
-fun PrimaryIconButton(
+fun IconButton(
     modifier: Modifier = Modifier,
     onClick: (() -> Unit)? = null,
     iconRes: String,
