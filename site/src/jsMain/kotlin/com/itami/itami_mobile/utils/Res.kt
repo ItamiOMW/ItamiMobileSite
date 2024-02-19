@@ -23,6 +23,9 @@ object Res {
         const val KOTLIN = "images/kotlin.svg"
         const val KTOR = "images/ktor.svg"
         const val FIGMA = "images/figma.svg"
+        const val CALORIE_TRACKER_THUMBNAIL = "images/calorie_tracker_thumbnail"
+        const val MESSENGER_THUMBNAIL = "images/messenger_thumbnail"
+        const val NOTES_THUMBNAIL = "images/notes_thumbnail"
     }
 
 }
