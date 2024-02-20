@@ -73,7 +73,7 @@ val NavHeaderStyle by ComponentStyle(extraModifiers = { SmoothColorStyle.toModif
 fun NavHeader() {
     var colorMode by ColorMode.currentState
 
-    val sections = document.getElementsByClassName("section-container").asList()
+    val sections = remember { document.getElementsByClassName("section-container").asList() }
     var selectedSectionId by remember { mutableStateOf(Section.Start.id) }
 
     // Avoiding scrolling to the StartSection when the site is first visited
