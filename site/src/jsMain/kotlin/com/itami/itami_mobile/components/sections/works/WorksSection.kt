@@ -27,9 +27,7 @@ import org.jetbrains.compose.web.css.px
 fun WorksSection() {
     val breakpoint = rememberBreakpoint()
     SectionContainer(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(top = 134.px),
+        modifier = Modifier.padding(topBottom = 134.px),
         section = Section.Works,
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
