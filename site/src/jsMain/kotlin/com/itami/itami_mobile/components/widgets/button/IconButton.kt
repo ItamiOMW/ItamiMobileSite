@@ -6,13 +6,13 @@ import com.varabyte.kobweb.browser.dom.ElementTarget
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.overlay.Tooltip
-import com.varabyte.kobweb.silk.components.style.active
-import com.varabyte.kobweb.silk.components.style.addVariant
-import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.components.style.*
 import com.varabyte.kobweb.silk.theme.colors.palette.button
 import com.varabyte.kobweb.silk.theme.colors.palette.overlay
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
@@ -79,30 +79,6 @@ fun IconButton(
 }
 
 @Composable
-fun PrimaryIconButton(
-    modifier: Modifier = Modifier,
-    tooltipText: String? = null,
-    onClick: (() -> Unit)? = null,
-    icon: @Composable () -> Unit,
-) {
-    Button(
-        onClick = {
-            onClick?.invoke()
-        },
-        modifier = modifier,
-        variant = IconButtonVariant.then(PrimaryIconButtonVariant),
-    ) {
-        icon()
-    }
-    if (tooltipText != null) {
-        Tooltip(
-            target = ElementTarget.PreviousSibling,
-            text = tooltipText
-        )
-    }
-}
-
-@Composable
 fun IconButton(
     modifier: Modifier = Modifier,
     onClick: (() -> Unit)? = null,
@@ -127,5 +103,65 @@ fun IconButton(
             target = ElementTarget.PreviousSibling,
             text = tooltipText
         )
+    }
+}
+
+@Composable
+fun PrimaryIconButton(
+    modifier: Modifier = Modifier,
+    tooltipText: String? = null,
+    onClick: (() -> Unit)? = null,
+    icon: @Composable () -> Unit,
+) {
+    Button(
+        onClick = {
+            onClick?.invoke()
+        },
+        modifier = modifier,
+        variant = IconButtonVariant.then(PrimaryIconButtonVariant),
+    ) {
+        icon()
+    }
+    if (tooltipText != null) {
+        Tooltip(
+            target = ElementTarget.PreviousSibling,
+            text = tooltipText
+        )
+    }
+}
+
+val LinkIconButtonStyle by ComponentStyle {
+    base {
+        Modifier
+    }
+    cssRule(":active .icon") {
+        Modifier.scale(1.1)
+    }
+}
+
+@Composable
+fun LinkIconButton(
+    path: String,
+    modifier: Modifier = Modifier,
+    tooltipText: String? = null,
+    onClick: (() -> Unit)? = null,
+    icon: @Composable () -> Unit,
+    openLinkStrategy: OpenLinkStrategy = OpenLinkStrategy.IN_NEW_TAB
+) {
+    Link(
+        path = path,
+        openExternalLinksStrategy = openLinkStrategy,
+        openInternalLinksStrategy = openLinkStrategy,
+        modifier = LinkIconButtonStyle.toModifier()
+            .then(modifier)
+            .onClick { onClick?.invoke() },
+    ) {
+        icon()
+        if (tooltipText != null) {
+            Tooltip(
+                target = ElementTarget.PreviousSibling,
+                text = tooltipText
+            )
+        }
     }
 }

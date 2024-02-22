@@ -12,12 +12,9 @@ import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 
 // Default text style, used with different color and style variants in other styles or modifiers
 val TextStyle by ComponentStyle {
-    val colorPalette = colorMode.toPalette()
     val defaultFonts = Fonts[Breakpoint.LG]
     base {
-        Modifier
-            .color(colorPalette.text.primary)
-            .font { defaultFonts.bodyLarge }
+        Modifier.font { defaultFonts.bodyLarge }
     }
 }
 
@@ -85,6 +82,29 @@ val SubDisplayTextStyle by TextStyle.addVariant {
     Breakpoint.XL {
         val fontsXL = Fonts[Breakpoint.XL]
         Modifier.font { siteFont(fontsXL.subDisplay) }
+    }
+}
+
+val TitleTextStyle by TextStyle.addVariant {
+    Breakpoint.ZERO {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.title) }
+    }
+    Breakpoint.SM {
+        val fontsSM = Fonts[Breakpoint.SM]
+        Modifier.font { siteFont(fontsSM.title) }
+    }
+    Breakpoint.MD {
+        val fontsMD = Fonts[Breakpoint.MD]
+        Modifier.font { siteFont(fontsMD.title) }
+    }
+    Breakpoint.LG {
+        val fontsLG = Fonts[Breakpoint.LG]
+        Modifier.font { siteFont(fontsLG.title) }
+    }
+    Breakpoint.XL {
+        val fontsXL = Fonts[Breakpoint.XL]
+        Modifier.font { siteFont(fontsXL.title) }
     }
 }
 

@@ -82,6 +82,7 @@ fun SideMenu(
 ) {
     Overlay(
         modifier = Modifier
+            .zIndex(2)
             .setVariable(OverlayVars.BackgroundColor, Colors.Transparent)
             .onClick { onCloseRequest() },
         contentAlignment = Alignment.CenterStart

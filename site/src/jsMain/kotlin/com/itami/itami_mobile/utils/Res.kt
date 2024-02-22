@@ -7,6 +7,9 @@ object Res {
         const val START_SECTION_SUBTITLE = "I’m a Native Android Developer / beginner UI designer, looking forward to help people with my knowledge."
         const val START_SECTION_BUTTON_TEXT = "Explore my works"
 
+        const val WORKS_SECTION_TITLE = "Explore my works"
+        const val WORKS_SECTION_SUBTITLE = "All projects are mainly developed with Kotlin. It’s a powerful language used in various IT projects."
+
         const val SCROLL_HINT = "Scroll"
     }
 

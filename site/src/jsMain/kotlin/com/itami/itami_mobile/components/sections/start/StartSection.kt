@@ -46,9 +46,7 @@ fun StartSection() {
         section = Section.Start,
         verticalArrangement = Arrangement.Center
     ) {
-        Div(
-            attrs = StartSectionGridStyle.toAttrs()
-        ) {
+        Div(attrs = StartSectionGridStyle.toAttrs()) {
             TextContent(
                 breakpoint = breakpoint,
                 onExploreWorksClicked = { pageContext.router.navigateTo(Section.Works.href) }

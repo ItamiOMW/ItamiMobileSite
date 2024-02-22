@@ -46,3 +46,21 @@ val IconOnBrandColorVariant by IconStyle.addVariant {
         Modifier.color(colorPalette.brand.onPrimary)
     }
 }
+
+val LargeIconSize by IconStyle.addVariant {
+    Breakpoint.ZERO {
+        Modifier.size(1.8.cssRem)
+    }
+    Breakpoint.SM {
+        Modifier.size(2.2.cssRem)
+    }
+    Breakpoint.MD {
+        Modifier.size(2.5.cssRem)
+    }
+    Breakpoint.LG {
+        Modifier.size(2.8.cssRem)
+    }
+    Breakpoint.XL {
+        Modifier.size(3.cssRem)
+    }
+}

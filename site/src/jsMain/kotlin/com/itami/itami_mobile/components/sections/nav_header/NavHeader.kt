@@ -46,6 +46,7 @@ val NavHeaderStyle by ComponentStyle(extraModifiers = { SmoothColorStyle.toModif
             .display(DisplayStyle.Flex)
             .justifyContent(JustifyContent.SpaceBetween)
             .alignItems(AlignItems.Center)
+            .zIndex(1)
     }
 
     Breakpoint.ZERO {
@@ -85,7 +86,8 @@ fun NavHeader() {
         sections.forEach { section ->
             val positionInfo = section.getBoundingClientRect()
             val top = window.scrollY
-            val offset = positionInfo.top + top - 250 // Don't know why, but that's the only way it works ¯\_(@_@)_/¯
+            val offset =
+                positionInfo.top + top - 250 // Don't know why, but that's the only way it works ¯\_(@_@)_/¯
             val height = positionInfo.height
             val id = section.id
 
