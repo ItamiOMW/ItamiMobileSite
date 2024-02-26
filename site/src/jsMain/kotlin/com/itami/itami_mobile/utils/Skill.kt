@@ -3,26 +3,61 @@ package com.itami.itami_mobile.utils
 enum class Skill(
     val skillName: String,
     val experience: String,
-    val iconRes: String,
+    val iconResLight: String,
+    val iconResDark: String,
 ) {
     AndroidStudio(
         skillName = "Android Studio",
         experience = "2+ Years",
-        iconRes = Res.Images.ANDROID_STUDIO
+        iconResLight = Res.Images.ANDROID_STUDIO,
+        iconResDark = Res.Images.ANDROID_STUDIO,
+    ),
+    IntellijIdea(
+        skillName = "IntelliJ IDEA",
+        experience = "2+ Years",
+        iconResLight = Res.Images.INTELLIJ_IDEA,
+        iconResDark = Res.Images.INTELLIJ_IDEA,
     ),
     Kotlin(
         skillName = "Kotlin",
         experience = "2 Years",
-        iconRes = Res.Images.KOTLIN
+        iconResLight = Res.Images.KOTLIN,
+        iconResDark = Res.Images.KOTLIN
+    ),
+    Java(
+        skillName = "Java",
+        experience = "5 Months",
+        iconResLight = Res.Images.JAVA,
+        iconResDark = Res.Images.JAVA
     ),
     Ktor(
         skillName = "Ktor",
-        experience = "8 Months",
-        iconRes = Res.Images.KTOR
+        experience = "7 Months",
+        iconResLight = Res.Images.KTOR,
+        iconResDark = Res.Images.KTOR,
     ),
     Figma(
         skillName = "Figma",
-        experience = "8 Months",
-        iconRes = Res.Images.FIGMA
+        experience = "7 Months",
+        iconResLight = Res.Images.FIGMA,
+        iconResDark = Res.Images.FIGMA
     ),
+    Postgresql(
+        skillName = "PostgreSQL",
+        experience = "6 Months",
+        iconResLight = Res.Images.POSTGRESQL,
+        iconResDark = Res.Images.POSTGRESQL
+    ),
+    Firebase(
+        skillName = "Firebase",
+        experience = "2 Months",
+        iconResLight = Res.Images.FIREBASE,
+        iconResDark = Res.Images.FIREBASE
+    ),
+    GitHub(
+        skillName = "GitHub",
+        experience = "1+ Years",
+        iconResLight = Res.Images.GITHUB_LIGHT,
+        iconResDark = Res.Images.GITHUB_DARK
+    )
 }

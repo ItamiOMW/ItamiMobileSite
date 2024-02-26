@@ -18,6 +18,7 @@ import com.varabyte.kobweb.silk.components.style.addVariant
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.px
 
@@ -48,8 +49,9 @@ val SkillItemImageVariant by ImageStyle.addVariant {
 @Composable
 fun SkillItem(
     skill: Skill,
+    colorMode: ColorMode = ColorMode.current,
     modifier: Modifier = Modifier,
-    horizontalArrangement: Arrangement.Horizontal = Arrangement.Start
+    horizontalArrangement: Arrangement.Horizontal = Arrangement.Start,
 ) {
     Row(
         modifier = SkillItemStyle.toModifier().then(modifier),
@@ -57,7 +59,7 @@ fun SkillItem(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
-            src = skill.iconRes,
+            src = if (colorMode.isLight) skill.iconResLight else skill.iconResDark,
             variant = SkillItemImageVariant,
         )
         Column(
