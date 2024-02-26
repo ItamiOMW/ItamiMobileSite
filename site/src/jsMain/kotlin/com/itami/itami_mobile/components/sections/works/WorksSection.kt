@@ -20,6 +20,7 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
@@ -27,7 +28,7 @@ import org.jetbrains.compose.web.css.px
 fun WorksSection() {
     val breakpoint = rememberBreakpoint()
     SectionContainer(
-        modifier = Modifier.padding(topBottom = 134.px),
+        modifier = Modifier,
         section = Section.Works,
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -49,7 +50,7 @@ private fun TextContent(
     breakpoint: Breakpoint,
 ) {
     Column(
-        modifier = Modifier.flex(1),
+        modifier = Modifier.margin(top = 8.5.cssRem),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

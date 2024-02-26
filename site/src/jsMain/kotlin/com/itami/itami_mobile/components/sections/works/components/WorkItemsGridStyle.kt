@@ -3,11 +3,9 @@ package com.itami.itami_mobile.components.sections.works.components
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.gap
 import com.varabyte.kobweb.compose.ui.modifiers.margin
-import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.cssRem
-import org.jetbrains.compose.web.css.px
 
 val WorkItemsGridStyle by ComponentStyle {
     base {
@@ -16,18 +14,28 @@ val WorkItemsGridStyle by ComponentStyle {
             .margin(top = 4.75.cssRem)
     }
     Breakpoint.ZERO {
-        Modifier.padding(leftRight = 16.px)
+        Modifier
+            .gap(1.cssRem)
+            .margin(top = 3.cssRem)
     }
     Breakpoint.SM {
-        Modifier.padding(leftRight = 28.px)
+        Modifier
+            .gap(1.25.cssRem)
+            .margin(top = 3.cssRem)
     }
     Breakpoint.MD {
-        Modifier.padding(leftRight = 48.px)
+        Modifier
+            .gap(1.5.cssRem)
+            .margin(top = 3.5.cssRem)
     }
     Breakpoint.LG {
-        Modifier.padding(leftRight = 94.px)
+        Modifier
+            .gap(2.cssRem)
+            .margin(top = 4.cssRem)
     }
     Breakpoint.XL {
-        Modifier.padding(leftRight = 134.px)
+        Modifier
+            .gap(2.cssRem)
+            .margin(top = 4.5.cssRem)
     }
 }
