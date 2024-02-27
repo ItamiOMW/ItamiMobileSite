@@ -42,7 +42,7 @@ fun StartSection() {
     SectionContainer(
         modifier = StartSectionGradientCircleStyle.toModifier()
             .height(75.vh)
-            .minHeight(700.px),
+            .minHeight(650.px),
         section = Section.Start,
         verticalArrangement = Arrangement.Center
     ) {

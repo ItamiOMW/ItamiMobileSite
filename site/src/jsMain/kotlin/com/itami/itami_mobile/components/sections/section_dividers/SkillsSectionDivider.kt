@@ -29,17 +29,17 @@ val SkillSectionDividerStyle by ComponentStyle {
     Breakpoint.ZERO {
         Modifier
             .gap(12.px)
-            .padding(left = 1.5.cssRem, top = 3.cssRem, bottom = 3.cssRem)
+            .padding(left = 3.cssRem, top = 2.5.cssRem, bottom = 2.5.cssRem)
     }
     Breakpoint.SM {
         Modifier
             .gap(24.px)
-            .padding(topBottom = 3.23.cssRem)
+            .padding(topBottom = 3.cssRem)
     }
     Breakpoint.MD {
         Modifier
             .gap(24.px)
-            .padding(topBottom = 3.43.cssRem)
+            .padding(topBottom = 3.4.cssRem)
     }
 }
 

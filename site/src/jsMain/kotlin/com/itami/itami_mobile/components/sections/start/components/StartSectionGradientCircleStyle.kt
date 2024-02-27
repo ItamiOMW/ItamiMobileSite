@@ -17,7 +17,7 @@ val StartSectionGradientCircleStyle by ComponentStyle {
     Breakpoint.ZERO {
         Modifier
             .backgroundImage(
-                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 30.percent)) {
+                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 25.percent)) {
                     add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
                     add(Colors.Transparent, 35.percent)
                 }
