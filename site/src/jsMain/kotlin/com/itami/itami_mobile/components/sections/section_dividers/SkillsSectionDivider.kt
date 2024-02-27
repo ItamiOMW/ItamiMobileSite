@@ -8,13 +8,16 @@ import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.components.layout.SimpleGrid
+import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.overlay
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.px
 
 val SkillSectionDividerStyle by ComponentStyle {
     val colorPalette = colorMode.toPalette()
@@ -22,24 +25,15 @@ val SkillSectionDividerStyle by ComponentStyle {
         Modifier
             .fillMaxWidth()
             .background(colorPalette.overlay)
-            .flexWrap(FlexWrap.Wrap)
-            .display(DisplayStyle.Flex)
-            .justifyContent(JustifyContent.Center)
     }
     Breakpoint.ZERO {
-        Modifier
-            .gap(12.px)
-            .padding(left = 3.cssRem, top = 2.5.cssRem, bottom = 2.5.cssRem)
+        Modifier.padding(top = 2.5.cssRem, bottom = 2.5.cssRem)
     }
     Breakpoint.SM {
-        Modifier
-            .gap(24.px)
-            .padding(topBottom = 3.cssRem)
+        Modifier.padding(topBottom = 3.cssRem)
     }
     Breakpoint.MD {
-        Modifier
-            .gap(24.px)
-            .padding(topBottom = 3.4.cssRem)
+        Modifier.padding(topBottom = 3.4.cssRem)
     }
 }
 
@@ -53,12 +47,19 @@ fun SkillsSectionDivider(
         modifier = SkillSectionDividerStyle.toModifier().then(modifier),
         contentAlignment = Alignment.Center
     ) {
-        skillsToDisplay.forEach { skill ->
-            SkillItem(
-                skill = skill,
-                modifier = Modifier.flexBasis(if (breakpoint >= Breakpoint.MD) 25.percent else 50.percent),
-                horizontalArrangement = if (breakpoint >= Breakpoint.MD) Arrangement.Center else Arrangement.Start
-            )
+        SimpleGrid(
+            modifier = Modifier
+                .gap(if (breakpoint >= Breakpoint.MD) 24.px else 16.px)
+                .padding(left = if (breakpoint <= Breakpoint.SM) 36.px else 0.px),
+            numColumns = numColumns(base = 2, sm = 4, md = 4)
+        ) {
+            skillsToDisplay.forEach { skill ->
+                SkillItem(
+                    skill = skill,
+                    modifier = Modifier.flexGrow(1),
+                    horizontalArrangement = if (breakpoint >= Breakpoint.MD) Arrangement.Center else Arrangement.Start
+                )
+            }
         }
     }
 }
