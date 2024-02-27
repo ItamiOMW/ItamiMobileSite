@@ -17,7 +17,6 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.overlay
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.cssRem
-import org.jetbrains.compose.web.css.px
 
 val SkillSectionDividerStyle by ComponentStyle {
     val colorPalette = colorMode.toPalette()
@@ -49,8 +48,8 @@ fun SkillsSectionDivider(
     ) {
         SimpleGrid(
             modifier = Modifier
-                .gap(if (breakpoint >= Breakpoint.MD) 24.px else 16.px)
-                .padding(left = if (breakpoint <= Breakpoint.SM) 36.px else 0.px),
+                .gap(if (breakpoint >= Breakpoint.MD) 1.5.cssRem else 1.cssRem)
+                .padding(left = if (breakpoint <= Breakpoint.SM) 2.25.cssRem else 0.cssRem),
             numColumns = numColumns(base = 2, sm = 4, md = 4)
         ) {
             skillsToDisplay.forEach { skill ->
