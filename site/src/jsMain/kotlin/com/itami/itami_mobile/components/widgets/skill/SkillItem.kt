@@ -19,6 +19,7 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
+import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.px
 
@@ -30,19 +31,19 @@ val SkillItemStyle by ComponentStyle(extraModifiers = { TextStyle.toModifier(Lab
 
 val SkillItemImageVariant by ImageStyle.addVariant {
     Breakpoint.ZERO {
-        Modifier.size(24.px)
+        Modifier.size(1.5.cssRem)
     }
     Breakpoint.SM {
-        Modifier.size(28.px)
+        Modifier.size(1.75.cssRem)
     }
     Breakpoint.MD {
-        Modifier.size(32.px)
+        Modifier.size(2.cssRem)
     }
     Breakpoint.LG {
-        Modifier.size(36.px)
+        Modifier.size(2.25.cssRem)
     }
     Breakpoint.XL {
-        Modifier.size(36.px)
+        Modifier.size(2.25.cssRem)
     }
 }
 
