@@ -13,7 +13,9 @@ import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.modifiers.margin
+import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
+import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
@@ -22,7 +24,6 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
-import org.jetbrains.compose.web.css.px
 
 @Composable
 fun WorksSection() {
@@ -61,7 +62,7 @@ private fun TextContent(
         SpanText(
             modifier = TextStyle.toModifier(SubDisplayTextStyle, TextStyleSecondaryColor)
                 .maxWidth(if (breakpoint >= Breakpoint.SM) 75.percent else 100.percent)
-                .margin(top = 3.px)
+                .margin(top = 1.cssRem)
                 .textAlign(TextAlign.Center),
             text = Res.Strings.WORKS_SECTION_SUBTITLE
         )

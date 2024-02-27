@@ -21,7 +21,6 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.em
-import org.jetbrains.compose.web.css.px
 
 val SkillItemStyle by ComponentStyle(extraModifiers = { TextStyle.toModifier(LabelLargeTextStyle) }) {
     base {
@@ -64,7 +63,7 @@ fun SkillItem(
             variant = SkillItemImageVariant,
         )
         Column(
-            modifier = Modifier.margin(left = 12.px),
+            modifier = Modifier.margin(left = 0.75.cssRem),
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.SpaceBetween
         ) {

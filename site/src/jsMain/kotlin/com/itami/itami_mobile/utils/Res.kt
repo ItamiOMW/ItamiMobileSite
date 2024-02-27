@@ -8,13 +8,13 @@ object Res {
         const val START_SECTION_BUTTON_TEXT = "Explore my works"
 
         const val WORKS_SECTION_TITLE = "Explore my works"
-        const val WORKS_SECTION_SUBTITLE = "All projects are mainly developed with Kotlin. It’s a powerful language used in various IT projects."
+        const val WORKS_SECTION_SUBTITLE = "All projects are mainly developed with Kotlin. It’s a powerful cross-platform language and Google's preferred language for Android Development."
 
         const val SCROLL_HINT = "Scroll"
 
         const val ABOUT_SECTION_TITLE = "About me"
         // TODO add about me subtitle
-        const val ABOUT_SECTION_SUBTITLE = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        const val ABOUT_SECTION_SUBTITLE = "I’m Vadim, a self-taught Android Developer primary using Jetpack Compose. Recently, i also started learning UI design as well as Ktor for building REST APIs to improve user experience in my apps."
     }
 
     object FontFamilies {
