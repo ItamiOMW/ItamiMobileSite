@@ -1,11 +1,12 @@
 package com.itami.itami_mobile.components.sections.start
 
 import androidx.compose.runtime.Composable
-import com.itami.itami_mobile.components.sections.start.components.StartSectionGradientCircleStyle
 import com.itami.itami_mobile.components.sections.start.components.StartSectionGridStyle
 import com.itami.itami_mobile.components.sections.start.components.StartSectionImageStyle
 import com.itami.itami_mobile.components.widgets.button.PrimaryButton
 import com.itami.itami_mobile.components.widgets.section.SectionContainer
+import com.itami.itami_mobile.components.widgets.section.SectionContainerStyle
+import com.itami.itami_mobile.theme.brand
 import com.itami.itami_mobile.theme.fonts.*
 import com.itami.itami_mobile.theme.icons.ArrowForwardIcon
 import com.itami.itami_mobile.theme.icons.IconOnBrandColorVariant
@@ -13,26 +14,86 @@ import com.itami.itami_mobile.theme.icons.IconStyle
 import com.itami.itami_mobile.theme.icons.ScrollMouseIcon
 import com.itami.itami_mobile.utils.Res
 import com.itami.itami_mobile.utils.Section
+import com.varabyte.kobweb.compose.css.CSSPosition
 import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.css.functions.RadialGradient
+import com.varabyte.kobweb.compose.css.functions.radialGradient
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
+import com.varabyte.kobweb.silk.components.style.addVariant
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
 import org.jetbrains.compose.web.dom.Div
+
+val StartSectionVariant by SectionContainerStyle.addVariant {
+    val colorPalette = colorMode.toPalette()
+    base {
+        Modifier
+            .height(75.vh)
+            .minHeight(650.px)
+    }
+    Breakpoint.ZERO {
+        Modifier
+            .backgroundImage(
+                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 25.percent)) {
+                    add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
+                    add(Colors.Transparent, 35.percent)
+                }
+            )
+    }
+    Breakpoint.SM {
+        Modifier
+            .backgroundImage(
+                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 30.percent)) {
+                    add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
+                    add(Colors.Transparent, 40.percent)
+                }
+            )
+    }
+    Breakpoint.MD {
+        Modifier
+            .backgroundImage(
+                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 30.percent)) {
+                    add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
+                    add(Colors.Transparent, 45.percent)
+                }
+            )
+    }
+    Breakpoint.LG {
+        Modifier
+            .backgroundImage(
+                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 71.5.percent, y = 50.percent)) {
+                    add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
+                    add(Colors.Transparent, 35.percent)
+                }
+            )
+    }
+    Breakpoint.XL {
+        Modifier
+            .backgroundImage(
+                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 71.5.percent, y = 50.percent)) {
+                    add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
+                    add(Colors.Transparent, 30.percent)
+                }
+            )
+    }
+}
 
 @Composable
 fun StartSection() {
@@ -40,9 +101,8 @@ fun StartSection() {
     val breakpoint = rememberBreakpoint()
 
     SectionContainer(
-        modifier = StartSectionGradientCircleStyle.toModifier()
-            .height(75.vh)
-            .minHeight(650.px),
+        modifier = Modifier,
+        variant = StartSectionVariant,
         section = Section.Start,
         verticalArrangement = Arrangement.Center
     ) {
