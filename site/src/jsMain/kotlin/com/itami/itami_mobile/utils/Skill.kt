@@ -30,6 +30,12 @@ enum class Skill(
         iconResLight = Res.Images.JAVA,
         iconResDark = Res.Images.JAVA
     ),
+    JetpackCompose(
+        skillName = "Jetpack Compose",
+        experience = "1+ Years",
+        iconResLight = Res.Images.JETPACK_COMPOSE,
+        iconResDark = Res.Images.JETPACK_COMPOSE
+    ),
     Ktor(
         skillName = "Ktor",
         experience = "7 Months",

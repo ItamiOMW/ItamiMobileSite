@@ -1,7 +1,7 @@
 package com.itami.itami_mobile.components.sections.start
 
 import androidx.compose.runtime.Composable
-import com.itami.itami_mobile.components.sections.start.components.GradientCircleStyle
+import com.itami.itami_mobile.components.sections.start.components.StartSectionGradientCircleStyle
 import com.itami.itami_mobile.components.sections.start.components.StartSectionGridStyle
 import com.itami.itami_mobile.components.sections.start.components.StartSectionImageStyle
 import com.itami.itami_mobile.components.widgets.button.PrimaryButton
@@ -40,7 +40,7 @@ fun StartSection() {
     val breakpoint = rememberBreakpoint()
 
     SectionContainer(
-        modifier = GradientCircleStyle.toModifier()
+        modifier = StartSectionGradientCircleStyle.toModifier()
             .height(75.vh)
             .minHeight(700.px),
         section = Section.Start,

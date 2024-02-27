@@ -12,7 +12,7 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.percent
 
-val GradientCircleStyle by ComponentStyle {
+val StartSectionGradientCircleStyle by ComponentStyle {
     val colorPalette = colorMode.toPalette()
     Breakpoint.ZERO {
         Modifier

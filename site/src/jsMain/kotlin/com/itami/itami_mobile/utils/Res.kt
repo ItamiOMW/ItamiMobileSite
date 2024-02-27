@@ -14,7 +14,7 @@ object Res {
 
         const val ABOUT_SECTION_TITLE = "About me"
         // TODO add about me subtitle
-        const val ABOUT_SECTION_SUBTITLE = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        const val ABOUT_SECTION_SUBTITLE = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     }
 
     object FontFamilies {
@@ -36,6 +36,7 @@ object Res {
         const val POSTGRESQL = "images/postgresql.svg"
         const val GITHUB_LIGHT = "images/github_light.svg"
         const val GITHUB_DARK = "images/github_dark.svg"
+        const val JETPACK_COMPOSE = "images/compose.svg"
 
 
         const val CALORIE_TRACKER_THUMBNAIL = "images/calorie_tracker_thumbnail.png"
