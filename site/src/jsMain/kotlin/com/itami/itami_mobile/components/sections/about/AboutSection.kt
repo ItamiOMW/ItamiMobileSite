@@ -87,7 +87,6 @@ fun AboutSection() {
     }
 }
 
-
 @Composable
 private fun TextContent() {
     Column(
