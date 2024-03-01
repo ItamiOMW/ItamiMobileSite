@@ -13,7 +13,6 @@ object Res {
         const val SCROLL_HINT = "Scroll"
 
         const val ABOUT_SECTION_TITLE = "About me"
-        // TODO add about me subtitle
         const val ABOUT_SECTION_SUBTITLE = "I’m Vadim, a self-taught Android Developer primary using Jetpack Compose. Recently, i also started learning UI design as well as Ktor for building REST APIs to improve user experience in my apps."
     }
 
