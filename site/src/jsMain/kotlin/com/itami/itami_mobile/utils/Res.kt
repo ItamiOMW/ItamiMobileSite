@@ -6,11 +6,10 @@ object Res {
         const val START_SECTION_TITLE = "Mobile / UI design / Backend"
         const val START_SECTION_SUBTITLE = "I’m a Native Android Developer / beginner UI designer, looking forward to help people with my knowledge."
         const val START_SECTION_BUTTON_TEXT = "Explore my works"
+        const val SCROLL_HINT = "Scroll"
 
         const val WORKS_SECTION_TITLE = "Explore my works"
         const val WORKS_SECTION_SUBTITLE = "All projects are mainly developed with Kotlin. It’s a powerful cross-platform language and Google's preferred language for Android Development."
-
-        const val SCROLL_HINT = "Scroll"
 
         const val ABOUT_SECTION_TITLE = "About me"
         const val ABOUT_SECTION_SUBTITLE = "I’m Vadim, a self-taught Android Developer primary using Jetpack Compose. Recently, i also started learning UI design as well as Ktor for building REST APIs to improve user experience in my apps."
@@ -23,6 +22,8 @@ object Res {
         const val EMAIL_LINK = "mailto:$EMAIL_ADDRESS"
         const val GITHUB_LINK = "https://github.com/ItamiOMW"
         const val TELEGRAM_LINK = "https://t.me/itamiomw"
+
+        const val COPYRIGHT = "© 2024, Itami Mobile"
     }
 
     object FontFamilies {

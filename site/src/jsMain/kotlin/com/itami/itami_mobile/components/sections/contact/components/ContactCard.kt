@@ -65,7 +65,7 @@ fun ContactCard(
         P(
             attrs = TextStyle.toModifier(BodyLargeTextStyle, TextStyleSecondaryColor)
                 .textAlign(TextAlign.Center)
-                .margin(top = 0.6.em)
+                .margin(top = 0.6.em, leftRight = 0.6.em)
                 .toAttrs(),
         ) {
             Text("If you have any questions, don't hesitate to contact me via email at ")
