@@ -14,6 +14,15 @@ object Res {
 
         const val ABOUT_SECTION_TITLE = "About me"
         const val ABOUT_SECTION_SUBTITLE = "I’m Vadim, a self-taught Android Developer primary using Jetpack Compose. Recently, i also started learning UI design as well as Ktor for building REST APIs to improve user experience in my apps."
+
+        const val CONTACT_SECTION_TITLE = "Contact me"
+
+        const val EMAIL_ADDRESS = "itamiomw@gmail.com"
+        const val TELEGRAM_USERNAME = "@itamiomw"
+
+        const val EMAIL_LINK = "mailto:$EMAIL_ADDRESS"
+        const val GITHUB_LINK = "https://github.com/ItamiOMW"
+        const val TELEGRAM_LINK = "https://t.me/itamiomw"
     }
 
     object FontFamilies {

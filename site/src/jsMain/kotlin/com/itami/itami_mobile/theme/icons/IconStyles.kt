@@ -64,3 +64,21 @@ val LargeIconSize by IconStyle.addVariant {
         Modifier.size(3.cssRem)
     }
 }
+
+val MediumIconSize by IconStyle.addVariant {
+    Breakpoint.ZERO {
+        Modifier.size(1.8.cssRem)
+    }
+    Breakpoint.SM {
+        Modifier.size(2.cssRem)
+    }
+    Breakpoint.MD {
+        Modifier.size(2.2.cssRem)
+    }
+    Breakpoint.LG {
+        Modifier.size(2.3.cssRem)
+    }
+    Breakpoint.XL {
+        Modifier.size(2.5.cssRem)
+    }
+}

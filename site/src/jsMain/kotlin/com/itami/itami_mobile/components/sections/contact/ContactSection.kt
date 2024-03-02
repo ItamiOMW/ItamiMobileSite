@@ -1,34 +1,35 @@
 package com.itami.itami_mobile.components.sections.contact
 
 import androidx.compose.runtime.Composable
+import com.itami.itami_mobile.components.sections.contact.components.ContactCard
 import com.itami.itami_mobile.components.widgets.section.SectionContainer
-import com.itami.itami_mobile.theme.fonts.DisplayTextStyle
-import com.itami.itami_mobile.theme.fonts.TextStyle
-import com.itami.itami_mobile.theme.fonts.TextStylePrimaryColor
+import com.itami.itami_mobile.components.widgets.section.SectionContainerStyle
 import com.itami.itami_mobile.utils.Section
-import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.minHeight
-import com.varabyte.kobweb.compose.ui.modifiers.textAlign
-import com.varabyte.kobweb.silk.components.style.toModifier
-import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.components.style.addVariant
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
 
+val ContactSectionVariant by SectionContainerStyle.addVariant {
+    base {
+        Modifier
+            .height(90.vh)
+            .minHeight(600.px)
+    }
+}
 
 @Composable
 fun ContactSection() {
     SectionContainer(
-        modifier = Modifier.minHeight(100.vh),
+        variant = ContactSectionVariant,
         section = Section.Contact,
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        SpanText(
-            modifier = TextStyle.toModifier(DisplayTextStyle, TextStylePrimaryColor)
-                .textAlign(TextAlign.Center),
-            text = Section.Contact.text
-        )
+        ContactCard()
     }
 }
