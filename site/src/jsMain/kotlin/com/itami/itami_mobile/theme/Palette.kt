@@ -21,7 +21,7 @@ fun initSilkPalette(ctx: InitSilkContext) {
                 )
                 text.set(
                     primary = Color.rgb(r = 0, g = 0, b = 25),
-                    secondary = Color.rgb(r = 64, g = 64, b = 64)
+                    secondary = Color.rgb(r = 46, g = 46, b = 66)
                 )
                 button.set(
                     default = brandPrimary,
