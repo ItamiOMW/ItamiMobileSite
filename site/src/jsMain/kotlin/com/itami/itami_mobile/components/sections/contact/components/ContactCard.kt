@@ -1,8 +1,10 @@
 package com.itami.itami_mobile.components.sections.contact.components
 
 import androidx.compose.runtime.Composable
-import com.itami.itami_mobile.components.widgets.social.SocialLink
+import com.itami.itami_mobile.components.widgets.button.LinkIconButton
 import com.itami.itami_mobile.theme.fonts.*
+import com.itami.itami_mobile.theme.icons.IconStyle
+import com.itami.itami_mobile.theme.icons.MediumIconSize
 import com.itami.itami_mobile.utils.Res
 import com.itami.itami_mobile.utils.Social
 import com.varabyte.kobweb.compose.css.TextAlign
@@ -17,6 +19,7 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.palette.overlay
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.cssRem
@@ -51,6 +54,7 @@ val ContactCardStyle by ComponentStyle {
 @Composable
 fun ContactCard(
     modifier: Modifier = Modifier,
+    colorMode: ColorMode = ColorMode.current
 ) {
     Column(
         modifier = ContactCardStyle.toModifier().then(modifier),
@@ -90,7 +94,11 @@ fun ContactCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Social.entries.forEach { social ->
-                SocialLink(social = social)
+                LinkIconButton(
+                    path = social.link,
+                    iconRes = if (colorMode.isLight) social.iconResLight else social.iconResDark,
+                    iconModifier = IconStyle.toModifier(MediumIconSize)
+                )
             }
         }
     }

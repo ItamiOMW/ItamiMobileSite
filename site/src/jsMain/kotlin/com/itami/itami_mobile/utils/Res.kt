@@ -34,7 +34,10 @@ object Res {
     object Images {
         const val LOGO_DARK = "images/logo_dark.svg"
         const val LOGO_LIGHT = "images/logo_light.svg"
+        const val KOBWEB = "images/kobweb.png"
+
         const val START_IMAGE = "images/start_image.svg"
+
         const val ANDROID_STUDIO = "images/android_studio.svg"
         const val KOTLIN = "images/kotlin.svg"
         const val KTOR = "images/ktor.svg"
@@ -43,10 +46,13 @@ object Res {
         const val JAVA = "images/java.svg"
         const val FIREBASE = "images/firebase.svg"
         const val POSTGRESQL = "images/postgresql.svg"
+        const val JETPACK_COMPOSE = "images/compose.svg"
         const val GITHUB_LIGHT = "images/github_light.svg"
         const val GITHUB_DARK = "images/github_dark.svg"
-        const val JETPACK_COMPOSE = "images/compose.svg"
-
+        const val MAIL_LIGHT = "images/mail_light.svg"
+        const val MAIL_DARK = "images/mail_dark.svg"
+        const val TELEGRAM_LIGHT = "images/telegram_light.svg"
+        const val TELEGRAM_DARK = "images/telegram_dark.svg"
 
         const val CALORIE_TRACKER_THUMBNAIL = "images/calorie_tracker_thumbnail.png"
         const val MESSENGER_THUMBNAIL = "images/messenger_thumbnail.png"

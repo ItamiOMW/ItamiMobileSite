@@ -1,35 +1,23 @@
 package com.itami.itami_mobile.utils
 
-import androidx.compose.runtime.Composable
-import com.itami.itami_mobile.theme.icons.*
-import com.varabyte.kobweb.silk.components.style.toModifier
-
 enum class Social(
     val link: String,
-    val content: @Composable () -> Unit
+    val iconResLight: String,
+    val iconResDark: String,
 ) {
     Email(
         link = Res.Strings.EMAIL_LINK,
-        content =  {
-            EmailIcon(
-                modifier = IconStyle.toModifier(MediumIconSize)
-            )
-        }
+        iconResLight = Res.Images.MAIL_LIGHT,
+        iconResDark = Res.Images.MAIL_DARK
     ),
     Telegram(
         link = Res.Strings.TELEGRAM_LINK,
-        content =  {
-            TelegramIcon(
-                modifier = IconStyle.toModifier(MediumIconSize)
-            )
-        }
+        iconResLight = Res.Images.TELEGRAM_LIGHT,
+        iconResDark = Res.Images.TELEGRAM_DARK
     ),
     GitHub(
         link = Res.Strings.GITHUB_LINK,
-        content =  {
-            GitHubIcon(
-                modifier = IconStyle.toModifier(MediumIconSize)
-            )
-        }
+        iconResLight = Res.Images.GITHUB_LIGHT,
+        iconResDark = Res.Images.GITHUB_DARK
     ),
 }

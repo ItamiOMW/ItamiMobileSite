@@ -2,6 +2,7 @@ package com.itami.itami_mobile.components.layouts
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import com.itami.itami_mobile.components.sections.footer.Footer
 import com.itami.itami_mobile.components.sections.nav_header.NavHeader
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -35,6 +36,7 @@ fun DefaultPageLayout(
         ) {
             NavHeader()
             content()
+            Footer()
         }
     }
 }
