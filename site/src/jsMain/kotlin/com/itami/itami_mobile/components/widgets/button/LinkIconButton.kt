@@ -3,9 +3,11 @@ package com.itami.itami_mobile.components.widgets.button
 import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.theme.icons.IconStyle
 import com.varabyte.kobweb.browser.dom.ElementTarget
+import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.scale
+import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -17,7 +19,7 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 
 val LinkIconButtonVariant by LinkStyle.addVariant {
     base {
-        Modifier
+        Modifier.transition(CSSTransition("0.15s"))
     }
     hover {
         Modifier.scale(1.1)
