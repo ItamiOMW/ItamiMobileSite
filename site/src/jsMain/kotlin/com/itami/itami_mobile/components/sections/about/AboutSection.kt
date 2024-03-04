@@ -34,14 +34,7 @@ import org.jetbrains.compose.web.css.vh
 val AboutSectionVariant by SectionContainerStyle.addVariant {
     val colorPalette = colorMode.toPalette()
     base {
-        Modifier
-            .minHeight(100.vh)
-            .backgroundImage(
-                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 50.percent)) {
-                    add(colorPalette.brand.primary.toRgb().copyf(alpha = if (colorMode.isDark) 0.1f else 0.2f))
-                    add(Colors.Transparent, 50.percent)
-                }
-            )
+        Modifier.minHeight(100.vh)
     }
     Breakpoint.ZERO {
         Modifier
