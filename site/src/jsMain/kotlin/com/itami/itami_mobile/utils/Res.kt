@@ -12,7 +12,7 @@ object Res {
         const val WORKS_SECTION_SUBTITLE = "All projects are mainly developed with Kotlin. It’s a powerful cross-platform language and Google's preferred language for Android Development."
 
         const val ABOUT_SECTION_TITLE = "About me"
-        const val ABOUT_SECTION_SUBTITLE = "I’m Vadim, a self-taught Android Developer primary using Jetpack Compose. Recently, i also started learning UI design as well as Ktor for building REST APIs to improve user experience in my apps."
+        const val ABOUT_SECTION_SUBTITLE = "I’m Vadim, a self-taught Android Developer specializing in Jetpack Compose and Kotlin. While my primary focus is Android development, i also possess skills in creating simple UI designs and developing RESTful APIs."
 
         const val CONTACT_SECTION_TITLE = "Contact me"
 
