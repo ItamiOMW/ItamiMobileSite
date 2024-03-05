@@ -106,9 +106,7 @@ fun SideMenu(
                     CloseIcon(modifier = IconStyle.toModifier())
                 }
                 Column(
-                    modifier = Modifier
-                        .padding(right = 0.75.cssRem)
-                        .gap(1.5.cssRem),
+                    modifier = Modifier.gap(1.5.cssRem),
                     horizontalAlignment = Alignment.Start
                 ) {
                     Section.entries.forEach { section ->
