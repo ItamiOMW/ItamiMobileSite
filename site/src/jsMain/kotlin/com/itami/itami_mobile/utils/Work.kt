@@ -38,10 +38,10 @@ enum class Work(
         link = "https://github.com/ItamiOWM/NotesWithRESTAPI",
         imageRes = Res.Images.NOTES_THUMBNAIL
     ),
-    TicTacToe(
-        workName = "Tic Tac Toe",
-        description = "Design",
-        link = "https://www.figma.com/file/S0hhAOGOxQMRuhoqiJf14p/Tic-Tac-Toe?type=design&node-id=0%3A1&mode=design&t=v43yZwGCCRgZfZsw-1",
-        imageRes = "images/tic_tac_toe.png"
-    )
+    CalorieTrackerCopy(
+        workName = "Calorie Tracker",
+        description = "Android & Backend & Design",
+        link = "https://github.com/ItamiOWM/CalorieTracker",
+        imageRes = Res.Images.CALORIE_TRACKER_THUMBNAIL
+    ),
 }
