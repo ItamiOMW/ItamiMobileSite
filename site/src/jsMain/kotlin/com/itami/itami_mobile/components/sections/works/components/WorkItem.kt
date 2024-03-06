@@ -26,7 +26,10 @@ import com.varabyte.kobweb.silk.components.style.before
 import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.Position
+import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.s
 
 val WorkItemStyle by ComponentStyle {
     base {
@@ -49,9 +52,7 @@ val WorkItemStyle by ComponentStyle {
         Modifier.fillMaxHeight()
     }
     cssRule(":hover .work-item-overlay") {
-        Modifier
-            .top(50.percent)
-            .opacity(1)
+        Modifier.opacity(1)
     }
 }
 
@@ -66,8 +67,6 @@ val WorkItemOverlayStyle by ComponentStyle {
         Modifier
             .position(Position.Absolute)
             .textAlign(TextAlign.Center)
-            .translate(tx = 0.percent, ty = (-50).percent)
-            .top(65.percent)
             .transition(CSSTransition("ease-in-out", 0.5.s))
             .opacity(0)
             .fillMaxWidth()
