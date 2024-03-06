@@ -29,7 +29,11 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-val ContactCardStyle by ComponentStyle {
+val ContactCardStyle by ComponentStyle(
+    extraModifiers = {
+        TextStyle.toModifier(BodyLargeTextStyle)
+    }
+) {
     val colors = colorMode.toPalette()
     base {
         Modifier
@@ -89,7 +93,7 @@ fun ContactCard(
         }
         Row(
             modifier = Modifier
-                .margin(top = 4.3.em)
+                .margin(top = 3.em)
                 .gap(1.5.em),
             verticalAlignment = Alignment.CenterVertically
         ) {
