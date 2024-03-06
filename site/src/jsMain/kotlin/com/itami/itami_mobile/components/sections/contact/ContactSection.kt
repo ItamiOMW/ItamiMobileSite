@@ -11,14 +11,19 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.silk.components.style.addVariant
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
 
 val ContactSectionVariant by SectionContainerStyle.addVariant {
     base {
-        Modifier
-            .height(90.vh)
-            .minHeight(600.px)
+        Modifier.minHeight(600.px)
+    }
+    Breakpoint.ZERO {
+        Modifier.height(100.vh)
+    }
+    Breakpoint.MD {
+        Modifier.height(85.vh)
     }
 }
 
