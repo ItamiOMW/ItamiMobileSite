@@ -50,7 +50,7 @@ val WorkItemStyle by ComponentStyle {
     }
     cssRule(":hover .work-item-overlay") {
         Modifier
-//            .top(50.percent)
+            .top(50.percent)
             .opacity(1)
     }
 }
@@ -66,9 +66,8 @@ val WorkItemOverlayStyle by ComponentStyle {
         Modifier
             .position(Position.Absolute)
             .textAlign(TextAlign.Center)
-//            .top(65.percent)
-//            .left(50.percent)
-//            .translate((-50).percent, (-50).percent)
+            .translate(tx = 0.percent, ty = (-50).percent)
+            .top(65.percent)
             .transition(CSSTransition("ease-in-out", 0.5.s))
             .opacity(0)
             .fillMaxWidth()

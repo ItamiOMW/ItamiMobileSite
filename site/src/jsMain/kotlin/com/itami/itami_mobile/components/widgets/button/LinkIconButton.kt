@@ -13,6 +13,7 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.navigation.LinkStyle
 import com.varabyte.kobweb.silk.components.overlay.Tooltip
+import com.varabyte.kobweb.silk.components.style.active
 import com.varabyte.kobweb.silk.components.style.addVariant
 import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.toModifier
@@ -23,6 +24,9 @@ val LinkIconButtonVariant by LinkStyle.addVariant {
     }
     hover {
         Modifier.scale(1.1)
+    }
+    active {
+        Modifier.scale(1.2)
     }
 }
 
