@@ -2,7 +2,7 @@ package com.itami.itami_mobile.components.sections.works
 
 import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.sections.works.components.WorkItem
-import com.itami.itami_mobile.components.sections.works.components.WorkItemsGridStyle
+import com.itami.itami_mobile.components.sections.works.components.WorkItemsSimpleGridVariant
 import com.itami.itami_mobile.components.widgets.section.SectionContainer
 import com.itami.itami_mobile.theme.fonts.*
 import com.itami.itami_mobile.utils.Res
@@ -40,7 +40,7 @@ fun WorksSection() {
         TextContent(breakpoint = breakpoint)
         SimpleGrid(
             numColumns = numColumns(base = 1, sm = 2, lg = 3),
-            modifier = WorkItemsGridStyle.toModifier()
+            variant = WorkItemsSimpleGridVariant
         ) {
             Work.entries.forEach {
                 WorkItem(
