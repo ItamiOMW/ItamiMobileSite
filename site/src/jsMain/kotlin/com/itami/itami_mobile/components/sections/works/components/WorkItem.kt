@@ -58,7 +58,8 @@ val WorkItemStyle by ComponentStyle {
 
 val WorkItemImageStyle by ComponentStyle {
     base {
-        Modifier.fillMaxSize()
+        Modifier
+            .fillMaxSize()
     }
 }
 

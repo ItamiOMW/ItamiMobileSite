@@ -24,6 +24,12 @@ enum class Work(
         link = "https://github.com/ItamiOWM/NotesWithRESTAPI",
         imageRes = Res.Images.NOTES_THUMBNAIL
     ),
+    ItamiMobile(
+        workName = "Itami Mobile",
+        description = "Web & Design",
+        link = "https://github.com/ItamiOMW/ItamiMobileSite",
+        imageRes = Res.Images.ITAMI_MOBILE_THUMBNAIL
+    ),
 
     // Temporary solution, Todo: add more works.
     MessengerCopy(
@@ -38,10 +44,10 @@ enum class Work(
         link = "https://github.com/ItamiOWM/NotesWithRESTAPI",
         imageRes = Res.Images.NOTES_THUMBNAIL
     ),
-    CalorieTrackerCopy(
-        workName = "Calorie Tracker",
-        description = "Android & Backend & Design",
-        link = "https://github.com/ItamiOWM/CalorieTracker",
-        imageRes = Res.Images.CALORIE_TRACKER_THUMBNAIL
-    ),
+//    CalorieTrackerCopy(
+//        workName = "Calorie Tracker",
+//        description = "Android & Backend & Design",
+//        link = "https://github.com/ItamiOWM/CalorieTracker",
+//        imageRes = Res.Images.CALORIE_TRACKER_THUMBNAIL
+//    ),
 }

@@ -57,6 +57,7 @@ object Res {
         const val CALORIE_TRACKER_THUMBNAIL = "images/calorie_tracker_thumbnail.png"
         const val MESSENGER_THUMBNAIL = "images/messenger_thumbnail.png"
         const val NOTES_THUMBNAIL = "images/notes_thumbnail.png"
+        const val ITAMI_MOBILE_THUMBNAIL = "images/itami_mobile_thumbnail.png"
     }
 
 }
