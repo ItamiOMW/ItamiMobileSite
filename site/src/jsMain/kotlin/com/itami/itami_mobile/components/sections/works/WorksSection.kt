@@ -43,7 +43,10 @@ fun WorksSection() {
             modifier = WorkItemsGridStyle.toModifier()
         ) {
             Work.entries.forEach {
-                WorkItem(work = it)
+                WorkItem(
+                    work = it,
+                    modifier = Modifier.flex(1)
+                )
             }
             MoreIsYetToCome()
         }
@@ -55,8 +58,7 @@ private fun MoreIsYetToCome() {
     val colorPalette = ColorMode.current.toPalette()
     Box(
         modifier = Modifier
-            .fillMaxSize()
-            .background(colorPalette.overlay)
+            .backgroundColor(colorPalette.overlay)
             .borderRadius(30.px),
         contentAlignment = Alignment.Center
     ) {
