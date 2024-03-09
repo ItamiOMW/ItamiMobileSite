@@ -10,20 +10,23 @@ import com.itami.itami_mobile.utils.Section
 import com.itami.itami_mobile.utils.Work
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.margin
-import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.textAlign
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
+import com.varabyte.kobweb.silk.theme.colors.palette.overlay
+import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
+import org.jetbrains.compose.web.css.px
 
 @Composable
 fun WorksSection() {
@@ -42,7 +45,25 @@ fun WorksSection() {
             Work.entries.forEach {
                 WorkItem(work = it)
             }
+            MoreIsYetToCome()
         }
+    }
+}
+
+@Composable
+private fun MoreIsYetToCome() {
+    val colorPalette = ColorMode.current.toPalette()
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(colorPalette.overlay)
+            .borderRadius(30.px),
+        contentAlignment = Alignment.Center
+    ) {
+        SpanText(
+            text = "More is yet to come...",
+            modifier = TextStyle.toModifier(TitleTextStyle)
+        )
     }
 }
 
