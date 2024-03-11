@@ -85,7 +85,7 @@ fun Footer() {
 @Composable
 private fun SocialLinks() {
     Row(
-        modifier = Modifier.gap(1.5.em),
+        modifier = Modifier.gap(1.em),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Social.entries.forEach { social ->
