@@ -23,6 +23,7 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.palette.overlay
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
@@ -39,13 +40,13 @@ val FooterStyle by ComponentStyle {
             .background(colorMode.overlay)
     }
     Breakpoint.ZERO {
-        Modifier.padding(left = 12.px, right = 12.px, top = 24.px, bottom = 16.px)
+        Modifier.padding(left = 12.px, right = 12.px, top = 24.px, bottom = 24.px)
     }
     Breakpoint.SM {
         Modifier.padding(left = 24.px, right = 24.px, top = 24.px, bottom = 24.px)
     }
     Breakpoint.MD {
-        Modifier.padding(left = 34.px, right = 34.px, top = 30.px, bottom = 30.px)
+        Modifier.padding(left = 34.px, right = 34.px, top = 34.px, bottom = 34.px)
     }
     Breakpoint.LG {
         Modifier.padding(left = 54.px, right = 54.px, top = 40.px, bottom = 40.px)
@@ -84,8 +85,9 @@ fun Footer() {
 
 @Composable
 private fun SocialLinks() {
+    val breakpoint = rememberBreakpoint()
     Row(
-        modifier = Modifier.gap(1.em),
+        modifier = Modifier.gap(if (breakpoint == Breakpoint.XL) 1.25.em else 1.em),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Social.entries.forEach { social ->
