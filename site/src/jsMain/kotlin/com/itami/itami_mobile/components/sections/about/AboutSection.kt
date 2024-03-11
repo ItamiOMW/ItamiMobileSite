@@ -28,6 +28,7 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.fr
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.vh
 
@@ -81,7 +82,8 @@ fun AboutSection() {
             modifier = Modifier
                 .gap(if (breakpoint >= Breakpoint.MD) 1.5.cssRem else 1.cssRem)
                 .fillMaxWidth()
-                .padding(top = 6.5.cssRem, left = 2.25.cssRem),
+                .padding(top = 6.5.cssRem, left = 2.25.cssRem)
+                .gridAutoRows { size(1.fr) },
             numColumns = numColumns(base = 2, md = 5, lg = 5)
         ) {
             Skill.entries.forEach { skill ->
