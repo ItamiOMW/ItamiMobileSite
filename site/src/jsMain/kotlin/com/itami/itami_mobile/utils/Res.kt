@@ -4,15 +4,15 @@ object Res {
 
     object Strings {
         const val START_SECTION_TITLE = "Mobile / UI design / Backend"
-        const val START_SECTION_SUBTITLE = "I’m a Native Android Developer / beginner UI designer, looking forward to help people with my knowledge."
+        const val START_SECTION_SUBTITLE = "I’m a Native Android Developer / beginner UI designer, looking forward to helping people with my knowledge."
         const val START_SECTION_BUTTON_TEXT = "Explore my works"
         const val SCROLL_HINT = "Scroll"
 
         const val WORKS_SECTION_TITLE = "Explore my works"
-        const val WORKS_SECTION_SUBTITLE = "All projects are mainly developed with Kotlin. It’s a powerful cross-platform language and Google's preferred language for Android Development."
+        const val WORKS_SECTION_SUBTITLE = "All projects are primarily developed with Kotlin. It's a powerful cross-platform language and Google's preferred language for Android development."
 
         const val ABOUT_SECTION_TITLE = "About me"
-        const val ABOUT_SECTION_SUBTITLE = "I’m Vadim, a self-taught Android Developer specializing in Jetpack Compose and Kotlin. While my primary focus is Android development, i also possess skills in creating simple UI designs and developing RESTful APIs."
+        const val ABOUT_SECTION_SUBTITLE = "I'm Vadim, a self-taught Android Developer specializing in Jetpack Compose and Kotlin. While my primary focus is Android development, I also possess skills in creating simple UI designs and developing RESTful APIs."
 
         const val CONTACT_SECTION_TITLE = "Contact me"
 
