@@ -80,7 +80,10 @@ fun AboutSection() {
         TextContent()
         SimpleGrid(
             modifier = Modifier
-                .gap(if (breakpoint >= Breakpoint.MD) 1.5.cssRem else 1.cssRem)
+                .gap(
+                    columnGap = if (breakpoint >= Breakpoint.MD) 1.5.cssRem else 1.cssRem,
+                    rowGap = if (breakpoint >= Breakpoint.MD) 2.5.cssRem else 1.5.cssRem
+                )
                 .fillMaxWidth()
                 .padding(top = 6.5.cssRem, left = 2.25.cssRem)
                 .gridAutoRows { size(1.fr) },
