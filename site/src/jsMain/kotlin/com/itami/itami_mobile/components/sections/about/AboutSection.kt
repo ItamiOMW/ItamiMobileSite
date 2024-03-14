@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.widgets.section.SectionContainer
 import com.itami.itami_mobile.components.widgets.section.SectionContainerStyle
 import com.itami.itami_mobile.components.widgets.skill.SkillItem
+import com.itami.itami_mobile.components.widgets.skill.components.AboutSectionSkillsGridVariant
 import com.itami.itami_mobile.theme.brand
 import com.itami.itami_mobile.theme.fonts.*
 import com.itami.itami_mobile.utils.Res
@@ -25,10 +26,8 @@ import com.varabyte.kobweb.silk.components.style.addVariant
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.cssRem
-import org.jetbrains.compose.web.css.fr
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.vh
 
@@ -70,7 +69,6 @@ val AboutSectionVariant by SectionContainerStyle.addVariant {
 
 @Composable
 fun AboutSection() {
-    val breakpoint = rememberBreakpoint()
     SectionContainer(
         modifier = Modifier,
         variant = AboutSectionVariant,
@@ -79,14 +77,7 @@ fun AboutSection() {
     ) {
         TextContent()
         SimpleGrid(
-            modifier = Modifier
-                .gap(
-                    columnGap = if (breakpoint >= Breakpoint.MD) 1.5.cssRem else 1.cssRem,
-                    rowGap = if (breakpoint >= Breakpoint.MD) 2.5.cssRem else 1.5.cssRem
-                )
-                .fillMaxWidth()
-                .padding(top = 6.5.cssRem, left = 2.25.cssRem)
-                .gridAutoRows { size(1.fr) },
+            variant = AboutSectionSkillsGridVariant,
             numColumns = numColumns(base = 2, md = 5, lg = 5)
         ) {
             Skill.entries.forEach { skill ->
