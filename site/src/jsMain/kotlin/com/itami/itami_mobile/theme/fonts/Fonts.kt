@@ -140,7 +140,7 @@ object Fonts {
         bodyLarge = superLargeFonts.bodyLarge.copy(fontSize = 1.cssRem),
         bodyMedium = superLargeFonts.bodyMedium.copy(fontSize = 0.9.cssRem),
         bodySmall = superLargeFonts.bodySmall.copy(fontSize = 0.7.cssRem),
-        labelLarge = superLargeFonts.labelLarge.copy(fontSize = 0.75.cssRem),
+        labelLarge = superLargeFonts.labelLarge.copy(fontSize = 0.8.cssRem),
         labelMedium = superLargeFonts.labelMedium.copy(fontSize = 0.7.cssRem),
         labelSmall = superLargeFonts.labelSmall.copy(fontSize = 0.65.cssRem),
     )

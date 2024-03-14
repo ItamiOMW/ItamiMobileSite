@@ -113,7 +113,8 @@ fun SideMenu(
                         SideMenuNavLink(
                             href = section.href,
                             text = section.text,
-                            selected = section.id == selectedSectionId
+                            selected = section.id == selectedSectionId,
+                            onClick = { onCloseRequest() }
                         )
                     }
                 }
@@ -158,10 +159,12 @@ private fun SideMenuNavLink(
     href: String,
     text: String,
     selected: Boolean,
+    onClick: () -> Unit,
 ) {
     Link(
         path = href,
         text = text,
-        variant = SideMenuLinkVariant.thenIf(selected, ActiveSideMenuLinkVariant)
+        variant = SideMenuLinkVariant.thenIf(selected, ActiveSideMenuLinkVariant),
+        modifier = Modifier.onClick { onClick() }
     )
 }

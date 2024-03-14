@@ -72,7 +72,7 @@ fun SkillItem(
                 modifier = TextStyle.toModifier(LabelLargeTextStyle, TextStylePrimaryColor)
             )
             SpanText(
-                text = skill.experience,
+                text = skill.level,
                 modifier = TextStyle.toModifier(BodySmallTextStyle, TextStyleSecondaryColor)
             )
         }
