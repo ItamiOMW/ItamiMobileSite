@@ -30,7 +30,7 @@ val SkillItemStyle by ComponentStyle(extraModifiers = { TextStyle.toModifier(Lab
 
 val SkillItemImageVariant by ImageStyle.addVariant {
     Breakpoint.ZERO {
-        Modifier.size(1.55.cssRem)
+        Modifier.size(1.65.cssRem)
     }
     Breakpoint.SM {
         Modifier.size(1.75.cssRem)
