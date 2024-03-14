@@ -72,7 +72,7 @@ fun NavHeader() {
     val sections = remember { document.getElementsByClassName("section-container").asList() }
     var selectedSectionId by remember { mutableStateOf(Section.Start.id) }
 
-    // Avoiding scrolling to the StartSection when the site is first visited
+    // Use UpdateEffect to avoid unnecessary scrolling to the StartSection when the site is first visited
     UpdateEffect(selectedSectionId) {
         window.history.replaceState(null, "", "#$selectedSectionId")
     }
@@ -81,8 +81,7 @@ fun NavHeader() {
         sections.forEach { section ->
             val positionInfo = section.getBoundingClientRect()
             val top = window.scrollY
-            val offset =
-                positionInfo.top + top - 250 // Don't know why, but that's the only way it works ¯\_(@_@)_/¯
+            val offset = positionInfo.top + top - 250 // Don't know why, but that's the only way it works ¯\_(-_-)_/¯
             val height = positionInfo.height
             val id = section.id
 
