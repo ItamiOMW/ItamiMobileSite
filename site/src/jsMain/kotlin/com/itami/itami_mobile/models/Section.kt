@@ -1,4 +1,4 @@
-package com.itami.itami_mobile.utils
+package com.itami.itami_mobile.models
 
 enum class Section(
     val text: String,

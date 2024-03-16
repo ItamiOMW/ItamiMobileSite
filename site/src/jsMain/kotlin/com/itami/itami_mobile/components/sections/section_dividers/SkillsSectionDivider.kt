@@ -2,7 +2,7 @@ package com.itami.itami_mobile.components.sections.section_dividers
 
 import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.widgets.skill.SkillItem
-import com.itami.itami_mobile.utils.Skill
+import com.itami.itami_mobile.models.Skill
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment

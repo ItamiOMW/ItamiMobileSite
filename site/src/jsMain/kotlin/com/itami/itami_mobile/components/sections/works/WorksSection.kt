@@ -4,10 +4,10 @@ import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.sections.works.components.WorkItem
 import com.itami.itami_mobile.components.sections.works.components.WorkItemsSimpleGridVariant
 import com.itami.itami_mobile.components.widgets.section.SectionContainer
+import com.itami.itami_mobile.models.Section
+import com.itami.itami_mobile.models.Work
 import com.itami.itami_mobile.theme.fonts.*
 import com.itami.itami_mobile.utils.Res
-import com.itami.itami_mobile.utils.Section
-import com.itami.itami_mobile.utils.Work
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box

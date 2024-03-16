@@ -1,4 +1,6 @@
-package com.itami.itami_mobile.utils
+package com.itami.itami_mobile.models
+
+import com.itami.itami_mobile.utils.Res
 
 enum class Skill(
     val skillName: String,

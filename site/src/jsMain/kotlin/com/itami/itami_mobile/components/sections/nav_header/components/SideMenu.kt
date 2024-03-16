@@ -3,12 +3,12 @@ package com.itami.itami_mobile.components.sections.nav_header.components
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
 import com.itami.itami_mobile.components.widgets.button.IconButton
+import com.itami.itami_mobile.models.Section
 import com.itami.itami_mobile.theme.brand
 import com.itami.itami_mobile.theme.fonts.LabelLargeTextStyle
 import com.itami.itami_mobile.theme.fonts.TextStyle
 import com.itami.itami_mobile.theme.icons.IconStyle
 import com.itami.itami_mobile.theme.text
-import com.itami.itami_mobile.utils.Section
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment

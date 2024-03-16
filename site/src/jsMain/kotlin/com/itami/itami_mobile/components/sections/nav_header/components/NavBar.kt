@@ -1,11 +1,11 @@
 package com.itami.itami_mobile.components.sections.nav_header.components
 
 import androidx.compose.runtime.Composable
+import com.itami.itami_mobile.models.Section
 import com.itami.itami_mobile.theme.brand
 import com.itami.itami_mobile.theme.fonts.LabelLargeTextStyle
 import com.itami.itami_mobile.theme.fonts.TextStyle
 import com.itami.itami_mobile.theme.text
-import com.itami.itami_mobile.utils.Section
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.ListStyleType
 import com.varabyte.kobweb.compose.css.TextDecorationLine

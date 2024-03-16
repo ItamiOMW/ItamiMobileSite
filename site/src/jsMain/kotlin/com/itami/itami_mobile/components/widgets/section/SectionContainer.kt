@@ -1,7 +1,7 @@
 package com.itami.itami_mobile.components.widgets.section
 
 import androidx.compose.runtime.Composable
-import com.itami.itami_mobile.utils.Section
+import com.itami.itami_mobile.models.Section
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.ColumnScope

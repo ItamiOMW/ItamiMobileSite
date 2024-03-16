@@ -3,9 +3,9 @@ package com.itami.itami_mobile.components.sections.nav_header
 import androidx.compose.runtime.*
 import com.itami.itami_mobile.components.sections.nav_header.components.*
 import com.itami.itami_mobile.components.widgets.button.IconButton
+import com.itami.itami_mobile.models.Section
 import com.itami.itami_mobile.theme.icons.HamburgerIcon
 import com.itami.itami_mobile.theme.icons.IconStyle
-import com.itami.itami_mobile.utils.Section
 import com.itami.itami_mobile.utils.UpdateEffect
 import com.varabyte.kobweb.compose.css.JustifyContent
 import com.varabyte.kobweb.compose.css.functions.blur

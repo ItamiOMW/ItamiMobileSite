@@ -2,11 +2,11 @@ package com.itami.itami_mobile.components.sections.footer
 
 import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.widgets.button.LinkIconButton
+import com.itami.itami_mobile.models.Social
 import com.itami.itami_mobile.theme.fonts.LabelLargeTextStyle
 import com.itami.itami_mobile.theme.fonts.TextStyle
 import com.itami.itami_mobile.theme.fonts.TextStyleSecondaryColor
 import com.itami.itami_mobile.utils.Res
-import com.itami.itami_mobile.utils.Social
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box

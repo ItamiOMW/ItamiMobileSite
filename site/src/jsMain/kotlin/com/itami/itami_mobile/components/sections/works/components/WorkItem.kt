@@ -2,13 +2,13 @@ package com.itami.itami_mobile.components.sections.works.components
 
 import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.widgets.button.LinkIconButton
+import com.itami.itami_mobile.models.Work
 import com.itami.itami_mobile.theme.fonts.BodyLargeTextStyle
 import com.itami.itami_mobile.theme.fonts.TextStyle
 import com.itami.itami_mobile.theme.fonts.TitleTextStyle
 import com.itami.itami_mobile.theme.icons.ExternalLinkIcon
 import com.itami.itami_mobile.theme.icons.IconStyle
 import com.itami.itami_mobile.theme.icons.LargeIconSize
-import com.itami.itami_mobile.utils.Work
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.css.TextAlign

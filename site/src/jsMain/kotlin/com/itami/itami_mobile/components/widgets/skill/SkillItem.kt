@@ -1,8 +1,8 @@
 package com.itami.itami_mobile.components.widgets.skill
 
 import androidx.compose.runtime.Composable
+import com.itami.itami_mobile.models.Skill
 import com.itami.itami_mobile.theme.fonts.*
-import com.itami.itami_mobile.utils.Skill
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row

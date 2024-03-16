@@ -5,11 +5,11 @@ import com.itami.itami_mobile.components.widgets.section.SectionContainer
 import com.itami.itami_mobile.components.widgets.section.SectionContainerStyle
 import com.itami.itami_mobile.components.widgets.skill.SkillItem
 import com.itami.itami_mobile.components.widgets.skill.components.AboutSectionSkillsGridVariant
+import com.itami.itami_mobile.models.Section
+import com.itami.itami_mobile.models.Skill
 import com.itami.itami_mobile.theme.brand
 import com.itami.itami_mobile.theme.fonts.*
 import com.itami.itami_mobile.utils.Res
-import com.itami.itami_mobile.utils.Section
-import com.itami.itami_mobile.utils.Skill
 import com.varabyte.kobweb.compose.css.CSSPosition
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.functions.RadialGradient

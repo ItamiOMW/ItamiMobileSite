@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.sections.contact.components.ContactCard
 import com.itami.itami_mobile.components.widgets.section.SectionContainer
 import com.itami.itami_mobile.components.widgets.section.SectionContainerStyle
-import com.itami.itami_mobile.utils.Section
+import com.itami.itami_mobile.models.Section
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
