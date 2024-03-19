@@ -87,9 +87,9 @@ val StartSectionVariant by SectionContainerStyle.addVariant {
     Breakpoint.XL {
         Modifier
             .backgroundImage(
-                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 71.5.percent, y = 50.percent)) {
+                radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 73.5.percent, y = 50.percent)) {
                     add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
-                    add(Colors.Transparent, 30.percent)
+                    add(Colors.Transparent, 28.percent)
                 }
             )
     }
@@ -111,7 +111,7 @@ fun StartSection() {
                 breakpoint = breakpoint,
                 onExploreWorksClicked = { pageContext.router.navigateTo(Section.Works.href) }
             )
-            ImageContent()
+            ImageContent(breakpoint = breakpoint)
         }
         ScrollHint(modifier = Modifier.displayIfAtLeast(Breakpoint.MD).align(Alignment.Start))
     }
@@ -126,10 +126,7 @@ private fun ScrollHint(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Start
     ) {
-        ScrollMouseIcon(
-            modifier = IconStyle.toModifier()
-                .size(36.px)
-        )
+        ScrollMouseIcon(modifier = IconStyle.toModifier().size(36.px))
         SpanText(
             modifier = TextStyle.toModifier(LabelMediumTextStyle, TextStylePrimaryColor)
                 .textAlign(TextAlign.Start),
@@ -174,10 +171,12 @@ private fun TextContent(
 }
 
 @Composable
-private fun ImageContent() {
+private fun ImageContent(
+    breakpoint: Breakpoint
+) {
     Box(
         modifier = Modifier.flex(1),
-        contentAlignment = Alignment.Center
+        contentAlignment = if (breakpoint >= Breakpoint.LG) Alignment.CenterEnd else Alignment.Center
     ) {
         Image(
             src = Res.Images.START_IMAGE,

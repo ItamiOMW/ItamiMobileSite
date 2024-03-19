@@ -33,7 +33,8 @@ val StartSectionGridStyle by ComponentStyle(extraModifiers = {
         Modifier
             .width(100.percent)
             .display(DisplayStyle.Flex)
-            .gap(50.px)
+            .columnGap(1.cssRem)
+            .rowGap(3.cssRem)
     }
     Breakpoint.ZERO {
         Modifier.flexDirection(FlexDirection.ColumnReverse)

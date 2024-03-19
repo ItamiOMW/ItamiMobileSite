@@ -29,8 +29,8 @@ fun initAppStyles(ctx: InitSilkContext) {
         breakpoints = BreakpointSizes(
             sm = 30.cssRem, // 480 px,
             md = 48.cssRem, // 768 px
-            lg = 76.cssRem, // 1216 px
-            xl = 94.cssRem, // 1504 px
+            lg = 81.25.cssRem, // 1300 px
+            xl = 100.cssRem, // 1600 px
         )
         modifyComponentStyle(ButtonStyle) {
             base {
