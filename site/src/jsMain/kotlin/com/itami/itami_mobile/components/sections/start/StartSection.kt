@@ -1,6 +1,7 @@
 package com.itami.itami_mobile.components.sections.start
 
 import androidx.compose.runtime.Composable
+import com.itami.itami_mobile.components.sections.start.components.SkillsSectionDivider
 import com.itami.itami_mobile.components.sections.start.components.StartSectionGridStyle
 import com.itami.itami_mobile.components.sections.start.components.StartSectionImageStyle
 import com.itami.itami_mobile.components.widgets.button.PrimaryButton
@@ -36,6 +37,7 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
+import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
@@ -43,13 +45,10 @@ import org.jetbrains.compose.web.dom.Div
 
 val StartSectionVariant by SectionContainerStyle.addVariant {
     val colorPalette = colorMode.toPalette()
-    base {
-        Modifier
-            .height(75.vh)
-            .minHeight(650.px)
-    }
     Breakpoint.ZERO {
         Modifier
+            .height(75.vh)
+            .minHeight(38.cssRem)
             .backgroundImage(
                 radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 25.percent)) {
                     add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
@@ -59,6 +58,7 @@ val StartSectionVariant by SectionContainerStyle.addVariant {
     }
     Breakpoint.SM {
         Modifier
+            .minHeight(40.6.cssRem)
             .backgroundImage(
                 radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 30.percent)) {
                     add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
@@ -68,15 +68,17 @@ val StartSectionVariant by SectionContainerStyle.addVariant {
     }
     Breakpoint.MD {
         Modifier
+            .height(78.vh)
             .backgroundImage(
                 radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 50.percent, y = 30.percent)) {
                     add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
-                    add(Colors.Transparent, 45.percent)
+                    add(Colors.Transparent, 40.percent)
                 }
             )
     }
     Breakpoint.LG {
         Modifier
+            .height(75.vh)
             .backgroundImage(
                 radialGradient(RadialGradient.Shape.Circle, CSSPosition(x = 71.5.percent, y = 50.percent)) {
                     add(colorPalette.brand.primary.toRgb().copyf(alpha = 0.6f))
@@ -100,20 +102,26 @@ fun StartSection() {
     val pageContext = rememberPageContext()
     val breakpoint = rememberBreakpoint()
 
-    SectionContainer(
-        modifier = Modifier,
-        variant = StartSectionVariant,
-        section = Section.Start,
-        verticalArrangement = Arrangement.Center
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Div(attrs = StartSectionGridStyle.toAttrs()) {
-            TextContent(
-                breakpoint = breakpoint,
-                onExploreWorksClicked = { pageContext.router.navigateTo(Section.Works.href) }
-            )
-            ImageContent(breakpoint = breakpoint)
+        SectionContainer(
+            modifier = Modifier,
+            variant = StartSectionVariant,
+            section = Section.Start,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Div(attrs = StartSectionGridStyle.toAttrs()) {
+                TextContent(
+                    breakpoint = breakpoint,
+                    onExploreWorksClicked = { pageContext.router.navigateTo(Section.Works.href) }
+                )
+                ImageContent(breakpoint = breakpoint)
+            }
+            ScrollHint(modifier = Modifier.displayIfAtLeast(Breakpoint.MD).align(Alignment.Start))
         }
-        ScrollHint(modifier = Modifier.displayIfAtLeast(Breakpoint.MD).align(Alignment.Start))
+        SkillsSectionDivider()
     }
 }
 

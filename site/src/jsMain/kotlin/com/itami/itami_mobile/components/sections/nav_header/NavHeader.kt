@@ -55,13 +55,19 @@ val NavHeaderStyle by ComponentStyle(extraModifiers = { SmoothColorStyle.toModif
         Modifier.padding(left = 24.px, right = 24.px, top = 10.px, bottom = 10.px)
     }
     Breakpoint.MD {
-        Modifier.padding(left = 34.px, right = 34.px, top = 15.px, bottom = 15.px)
+        Modifier
+            .padding(left = 34.px, right = 34.px, top = 15.px, bottom = 15.px)
+            .height(7.vh)
     }
     Breakpoint.LG {
-        Modifier.padding(left = 54.px, right = 54.px, top = 20.px, bottom = 20.px)
+        Modifier
+            .padding(left = 54.px, right = 54.px, top = 20.px, bottom = 20.px)
+            .height(10.vh)
     }
     Breakpoint.XL {
-        Modifier.padding(left = 104.px, right = 104.px, top = 20.px, bottom = 20.px)
+        Modifier
+            .padding(left = 104.px, right = 104.px, top = 20.px, bottom = 20.px)
+            .height(10.vh)
     }
 }
 

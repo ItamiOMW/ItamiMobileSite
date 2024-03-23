@@ -1,4 +1,4 @@
-package com.itami.itami_mobile.components.sections.section_dividers
+package com.itami.itami_mobile.components.sections.start.components
 
 import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.widgets.skill.SkillItem
@@ -17,6 +17,7 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.palette.overlay
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.vh
 
 val SkillSectionDividerStyle by ComponentStyle {
     val colorPalette = colorMode.toPalette()
@@ -26,10 +27,14 @@ val SkillSectionDividerStyle by ComponentStyle {
             .background(colorPalette.overlay)
     }
     Breakpoint.ZERO {
-        Modifier.padding(top = 2.5.cssRem, bottom = 2.5.cssRem)
+        Modifier
+            .padding(top = 2.5.cssRem, bottom = 2.5.cssRem)
+            .height(18.vh)
     }
     Breakpoint.SM {
-        Modifier.padding(topBottom = 3.cssRem)
+        Modifier
+            .height(15.vh)
+            .padding(topBottom = 3.cssRem)
     }
     Breakpoint.MD {
         Modifier.padding(topBottom = 3.4.cssRem)

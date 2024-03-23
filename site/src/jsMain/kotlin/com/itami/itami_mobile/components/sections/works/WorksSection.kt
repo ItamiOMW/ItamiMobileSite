@@ -70,7 +70,7 @@ private fun MoreIsYetToCome() {
 }
 
 @Composable
-private fun TextContent(
+private fun  TextContent(
     breakpoint: Breakpoint,
 ) {
     Column(

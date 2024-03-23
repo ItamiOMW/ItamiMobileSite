@@ -12,6 +12,7 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.ComponentVariant
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
+import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.keywords.auto
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -21,6 +22,7 @@ val SectionContainerStyle by ComponentStyle {
         Modifier
             .width(100.percent)
             .height(auto)
+            .maxWidth(130.cssRem)
             .classNames("section-container")
     }
     Breakpoint.ZERO {
