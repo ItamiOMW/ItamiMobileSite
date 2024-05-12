@@ -1,4 +1,4 @@
-package com.itami.itami_mobile.components.widgets.skill.components
+package com.itami.itami_mobile.components.sections.about.components
 
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth

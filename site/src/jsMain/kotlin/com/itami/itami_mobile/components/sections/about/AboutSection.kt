@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.itami.itami_mobile.components.widgets.section.SectionContainer
 import com.itami.itami_mobile.components.widgets.section.SectionContainerStyle
 import com.itami.itami_mobile.components.widgets.skill.SkillItem
-import com.itami.itami_mobile.components.widgets.skill.components.AboutSectionSkillsGridVariant
+import com.itami.itami_mobile.components.sections.about.components.AboutSectionSkillsGridVariant
 import com.itami.itami_mobile.models.Section
 import com.itami.itami_mobile.models.Skill
 import com.itami.itami_mobile.theme.brand
