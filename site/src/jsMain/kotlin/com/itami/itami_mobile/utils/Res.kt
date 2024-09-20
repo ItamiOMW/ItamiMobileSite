@@ -21,6 +21,7 @@ object Res {
 
         const val EMAIL_LINK = "mailto:$EMAIL_ADDRESS"
         const val GITHUB_LINK = "https://github.com/ItamiOMW"
+        const val LINKEDIN_LINK = "https://www.linkedin.com/in/vadim-vasilyev-5590a132a"
         const val TELEGRAM_LINK = "https://t.me/itamiomw"
 
         const val COPYRIGHT = "© 2024, Itami Mobile"
@@ -53,6 +54,8 @@ object Res {
         const val MAIL_DARK = "images/mail_dark.svg"
         const val TELEGRAM_LIGHT = "images/telegram_light.svg"
         const val TELEGRAM_DARK = "images/telegram_dark.svg"
+        const val LINKEDIN_LIGHT = "images/linkedin_light.svg"
+        const val LINKEDIN_DARK = "images/linkedin_dark.svg"
 
         const val CALORIE_TRACKER_THUMBNAIL = "images/calorie_tracker_thumbnail.png"
         const val MESSENGER_THUMBNAIL = "images/messenger_thumbnail.png"

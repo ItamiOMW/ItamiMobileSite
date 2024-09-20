@@ -22,4 +22,9 @@ enum class Social(
         iconResLight = Res.Images.GITHUB_LIGHT,
         iconResDark = Res.Images.GITHUB_DARK
     ),
+    LinkedIn(
+        link = Res.Strings.LINKEDIN_LINK,
+        iconResLight = Res.Images.LINKEDIN_LIGHT,
+        iconResDark = Res.Images.LINKEDIN_DARK
+    )
 }
